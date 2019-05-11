@@ -17,7 +17,12 @@
             <div class="nav-wrapper">
                 <div class="row">
                     <div class="col s10">
-                        <h5 class="white-text">Transferer</h5>
+                        <a href="portefeuille.php">
+                            <h5 class="white-text">
+                                <i class="material-icons left">arrow_back</i>
+                                <span class="left">Transferer</span>
+                            </h5>
+                        </a>
                     </div>
                     <div class="col s2">
                         <ul class="right">

@@ -51,7 +51,7 @@
     </div>
     <div class="row back-top">
         <div class="col s6 center">
-            <a href="tel:*1222%23" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
+            <a href="recharge.php" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
         </div>
         <div class="col s6 center">
             <a href="transferer.php" class="waves-effect btn-action waves-light yetu-blue btn">Tranferer</a>
