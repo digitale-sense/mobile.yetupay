@@ -18,5 +18,9 @@ if(isset($_GET['user_id'],$_GET['password'])){
     }
     else
         $message = array_merge($message, array('code' => -4));
+    
+}
+else{
+    $message = array_merge($message,array( "CDF" => '00,00', "USD" => '00,00'));
 }
 ?>

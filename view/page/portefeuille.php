@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    // $user_id =$_SESSION['user_id'];
+    // $pwd = $_SESSION['password'];
+    //  require_once('../../controller/user/sold.php?user_id='.$user_id.'&password='.$pwd);
+
+    require_once('../../controller/user/sold.php');
+?>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +38,7 @@
             </div>
         </nav>
     </header>
-    
+
     <!-- Screen balance -->
     <div class="row" id="bala-card">
         <div class="col s12">
@@ -41,10 +49,18 @@
                     </div>
                     <div class="row">
                         <div class="col s6" style="border-right:1px solid silver;">
-                            <span class="card-title center bold-style">300.00 $</span>
+                            <span class="card-title center bold-style"><?php   
+                                if(empty($message['code']))
+                                    echo $message['USD'].' '.'$';
+                                else
+                                    echo '-4';
+                            ?></span>
                         </div>
                         <div class="col s6">
-                            <span class="card-title center bold-style">5000.00 Fc</span>
+                            <span class="card-title center bold-style"><?php
+                                if(empty($message['code']))
+                                    echo $message['CDF'].' '.'Fc';
+                            ?></span>
                         </div>
                     </div>
                 </div>
