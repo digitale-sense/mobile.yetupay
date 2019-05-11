@@ -6,11 +6,10 @@ class UserDAO{
         $this->pdo = ConnectionManager::getConnection();
     }
 
-    public function add(User $user){
-        $req = $this->pdo->prepare("INSERT INTO users(pseudo,pass,tel_airtel,tel_orange,tel_vodacom,tel_africell) VALUES(:pseudo,:pass,:tel_airtel,:tel_orange,:tel_vodacom,:tel_africell)");
+    public function add($user){
+        $req = $this->pdo->prepare("INSERT INTO users(pass,tel_airtel,tel_orange,tel_vodacom,tel_africell) VALUES(:pass,:tel_airtel,:tel_orange,:tel_vodacom,:tel_africell)");
         $res = $req->execute(array(
-            'pseudo' => $user->getPseudo(),
-            'pass' => hash('sha512',$user->getPass(),true),
+            'pass'=> hash('sha512',$user->getPass(),true),
             'tel_airtel' => $user->getTelAirtel(),
             'tel_orange' => $user->getTelOrange(),
             'tel_vodacom' => $user->getTelVodacom(),
@@ -22,8 +21,9 @@ class UserDAO{
         return $response['last_id'];
     }
 
-    public function check_sign_in_datas(User $user){
-        $req = $this->pdo->prepare("SELECT id FROM users WHERE pseudo = :pseudo OR tel_airtel = :phone_number OR tel_orange = :phone_number OR tel_vodacom = :phone_number OR tel_africell = :phone_number");
+    public function check_sign_in_datas($user){
+        $req = $this->pdo->prepare("SELECT id FROM users WHERE tel_airtel = :phone_number OR tel_orange = :phone_number OR tel_vodacom = :phone_number OR tel_africell = :phone_number");
+        $phone_number;
         if(!is_null($user->getTelAirtel()))
             $phone_number = $user->getTelAirtel();
         else if(!is_null($user->getTelOrange()))
@@ -32,12 +32,12 @@ class UserDAO{
             $phone_number = $user->getTelVodacom();
         elseif(!is_null($user->getTelAfricell()))
             $phone_number = $user->getTelAfricell();
-        $req->execute(array('phone_number' => $phone_number,'pseudo' => $user->getPseudo()));
+        $req->execute(array('phone_number' => $phone_number));
         $res = $req->fetch();
         return $res['id'];
     }
 
-    public function check_log_in_datas(User $user){
+    public function check_log_in_datas($user){
         try{
             $req = $this->pdo->prepare("SELECT id FROM users WHERE (
                                         (id IS NOT NULL AND id = :id) OR 
@@ -63,17 +63,16 @@ class UserDAO{
             $res = $req->fetch();
             return $res['id'];
         } catch(Exception $e){
-            if(isset($e->getCode()))
-                return 0;
+            return $e->getMessage();
         }
     }
 
-    public function update_log_in_informations(User $user){
+    public function update_log_in_informations($user){
         $req = $this->pdo->prepare("UPDATE users SET last_connection_datetime = NOW(),last_connection_device = :last_connection_device WHERE id = :user_id");
         $req->execute(array('user_id' => $user->getId(),'last_connection_device' => $user->getLastConnectionDevice()));
     }
 
-    public function check_password(User $user){
+    public function check_password($user){
         $req = $this->pdo->prepare("SELECT id FROM users WHERE id = :user_id AND pass = :pass");
         $req->execute(array('user_id' => $user->getId(),'pass' => hash("sha512",$user->getPass(),true)));
         $res = $req->fetch();
@@ -105,57 +104,65 @@ class UserDAO{
                 $phone_number = $user->getTelVodacom();
             elseif(!is_null($user->getTelAfricell()))
                 $phone_number = $user->getTelAfricell();
-            return $req->execute(array('id' => $user->getID(),'phone_number' => $phone_number));
+            $req->execute(array('id' => $user->getID(),'phone_number' => $phone_number));
+            $response = ($req) ? "1" : "-3";
+            echo $response;
         } catch(Exception $e){
-            return !isset($e->getCode());
+            // echo $e->getCode();
+            echo "0";
         }
     }
 
-    public function delete_phone_number(User $user,$operator){
-        try {
-            $operators = array('airtel', 'orange', 'vodacom', 'africell');
-            $sql = "UPDATE users SET tel_" . $operators[$operator] . " = null WHERE id = :id";
-            $req = $this->pdo->prepare($sql);
-            return $req->execute(array('id' => $user->getId()));
-        } catch (Exception $e){
-            return !is_null($e);
-        }
+    public function delete_phone_number($user,$operator){
+        $operators = array('airtel','orange','vodacom','africell');
+        $sql = "UPDATE users SET tel_".$operators[$operator]." = null WHERE id = :id";
+        $req = $this->pdo->prepare($sql);
+        $req->execute(array('id' => $user->getId()));
+        $response = ($req) ? "1" : "-3";
+        echo $response;
     }
 
     public function update_email($user){
         try{
             $req = $this->pdo->prepare("UPDATE users SET email = :email WHERE id = :id");
-            return $req->execute(array('email' => $user->getEmail(),'id' => $user->getId()));
+            $req->execute(array('email' => $user->getEmail(),'id' => $user->getId()));
+            $response = ($req) ? "1" : "-3";
+            echo $response;
         } catch(Exception $e){
-            return !is_null($e);
+            // if($e->getCode() == "230000") ;
+            echo "0";
         }
     }
     
     public function update_fullname($user){
         try{
             $req = $this->pdo->prepare("UPDATE users SET fullname = :fullname WHERE id = :id");
-            return $req->execute(array('fullname' => $user->getFullName(),'id' => $user->getId()));
+            $req->execute(array('fullname' => $user->getFullName(),'id' => $user->getId()));
+            $response = ($req) ? "1" : "-3";
+            echo $response;
         } catch(Exception $e){
-            return !is_null($e);
+            // echo $e->getCode();
+            echo "0";
         }
     }
 
     public function update_pseudo($user){
         try{
             $req = $this->pdo->prepare("UPDATE users SET pseudo = :pseudo WHERE id = :id");
-            return $req->execute(array('pseudo' => $user->getPseudo(),'id' => $user->getId()));
+            $req->execute(array('pseudo' => $user->getPseudo(),'id' => $user->getId()));
+            $response = ($req) ? "1" : "-3";
+            echo $response;
         } catch(Exception $e){
-            return !is_null($e);
+            // echo $e->getCode();
+            echo "0";
         }
     }
 
     public function update_password($user){
-        try {
-            $req = $this->pdo->prepare("UPDATE users SET pass = :pass WHERE id = :id");
-            return $req->execute(array('pass' => hash('sha512', $user->getPass(), true), 'id' => $user->getId()));
-        } catch (Exception $e){
-            return !is_null($e);
-        }
+        $req = $this->pdo->prepare("UPDATE users SET pass = :pass WHERE id = :id");
+        $req->execute(array('pass' => hash('sha512',$user->getPass(),true),'id' => $user->getId()));
+        $response = ($req) ? "1" : "-3";
+        echo $response;
     }
 
     public function get_towns(){

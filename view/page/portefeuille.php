@@ -1,10 +1,7 @@
 <?php 
-    session_start();
-    // $user_id =$_SESSION['user_id'];
-    // $pwd = $_SESSION['password'];
-    //  require_once('../../controller/user/sold.php?user_id='.$user_id.'&password='.$pwd);
 
     require_once('../../controller/user/sold.php');
+    require_once('../../controller/user/transations.php');
 ?>
 <html lang="fr">
 <head>
@@ -105,7 +102,7 @@
                 <?php if ($i!=5-1) { ?>
                 <div class="divider"></div>
                 <?php }?>                
-               <?php }?>
+               <?php var_dump($transaction);}?>
             </div>
         </div>
     </div>
