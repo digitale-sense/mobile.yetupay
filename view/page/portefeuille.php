@@ -48,7 +48,7 @@
                         <div class="col s6" style="border-right:1px solid silver;">
                             <span class="card-title center bold-style"><?php   
                                 if(empty($message['code']))
-                                    echo $message['USD'].' '.'$';
+                                    echo $message['USD'].' '.'USD';
                                 else
                                     echo '-4';
                             ?></span>
@@ -56,7 +56,7 @@
                         <div class="col s6">
                             <span class="card-title center bold-style"><?php
                                 if(empty($message['code']))
-                                    echo $message['CDF'].' '.'Fc';
+                                    echo $message['CDF'].' '.'CDF';
                             ?></span>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card cr radius">
-               <?php for ($i=0; $i < 5; $i++) { ?>
+               <?php foreach ($transaction as $value) {?>
                 <div class="card-content row">
                     <div class="col s2">
                         <a class="btn-floating waves-effect waves-light btn-small z-depth-0 white">
@@ -91,18 +91,16 @@
                     <div class="col s10">
                         <p class="grey-text right">
                             <small>
-                                20/06/18
+                                <?php echo $value['datetime']?>
                             </small>
                         </p>
                         <h6 class="truncate no-margin bolder">Recharge</h6>
-                        <p>20.000 FC</p>
-                        <p class="truncate grey-text"># PP784575-1643-B46396</p>
+                        <p><?php echo $value['amount'] .' '.$value['currency'] ?></p>
+                        <p class="truncate grey-text"><?php echo $value['code']?></p>
                     </div>
                 </div>
-                <?php if ($i!=5-1) { ?>
-                <div class="divider"></div>
-                <?php }?>                
-               <?php var_dump($transaction);}?>
+                <div class="divider"></div>              
+               <?php }?>
             </div>
         </div>
     </div>
