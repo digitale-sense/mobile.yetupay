@@ -1,7 +1,7 @@
 <?php
-define('PATH','../../');
+define('PATH', '../../');
 $message = array();
-if(isset($_GET['agent_id'$_GET['dealer_id'],$_GET['amount'],$_GET['currency'])){
+if(isset($_GET['agent_id'], $_GET['dealer_id'], $_GET['amount'], $_GET['currency'])) {
     require_once(PATH.'db_config/connection_manager.class.php');
     require_once(PATH.'db_config/db_params.class.php');
     spl_autoload_register(function ($class) {
@@ -12,12 +12,12 @@ if(isset($_GET['agent_id'$_GET['dealer_id'],$_GET['amount'],$_GET['currency'])){
     $password = htmlspecialchars($_GET['password']);
     $sender = new User($dealer_id,null,null,null,$password,null,null,null,null,null,null,null,null,null);
     $dealer_dao = new DealerDAO();
-    if($dealer_dao->check_password($sender)){
+    if ($dealer_dao->check_password($sender)) {
         $user_id = $_GET['receiver_id'];
         $receiver = new User($user_id,null,null,null,null,null,null,null,null,null,null,null,null,null);
         $amount = $_GET['amount'];
         $currency = $_GET['currency'];
-        if($sender->getId() != 0){
+        if ($sender->getId() != 0) {
             $sender = $dealer_dao->get_dealer_by_id($sender->getId());
             $sold_available = ($currency == "CDF") ? $sender->getCDFSold() : $sender->getUSDSold();
             if($sold_available < $amount)
