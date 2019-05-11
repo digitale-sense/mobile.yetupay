@@ -72,10 +72,10 @@
     <!-- Controlle button -->
     <div class="row back-top">
         <div class="col s6 center">
-            <a href="tel:*1222%23" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
+            <a href="recharge.php" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
         </div>
         <div class="col s6 center">
-            <a href="transferer.php" class="waves-effect btn-action waves-light yetu-blue btn">Tranferer</a>
+            <a href="transferer.php" class="waves-effect btn-action waves-light yetu-blue btn">Transferer</a>
         </div>
     </div>
     <!-- End Controlle button -->
@@ -102,7 +102,9 @@
                         <p class="truncate grey-text"># PP784575-1643-B46396</p>
                     </div>
                 </div>
-                <div class="divider"></div>                  
+                <?php if ($i!=5-1) { ?>
+                <div class="divider"></div>
+                <?php }?>                
                <?php }?>
             </div>
         </div>

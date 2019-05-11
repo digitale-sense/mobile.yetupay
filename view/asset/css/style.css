@@ -63,3 +63,16 @@ header{
 .violet{
     background-color: #D24C8F !important;
 }
+.py-2{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.my-2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    line-height: normal;
+
+}

@@ -13,7 +13,6 @@ class TransactionDAO
         $req->execute(array($iduser));
         $trans = $req->fetchAll();
         echo json_encode($trans);
-
     }
 }
 
