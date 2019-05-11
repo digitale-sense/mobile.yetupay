@@ -1,6 +1,6 @@
 <?php
 define('PATH', '../../');
-$message = array();
+$transation= array();
 if(isset($_GET['user_id'], $_GET['user_hash_password'])){
     require_once(PATH . 'db_config/connection_manager.class.php');
     require_once(PATH . 'db_config/db_params.class.php');
@@ -13,9 +13,11 @@ if(isset($_GET['user_id'], $_GET['user_hash_password'])){
     $user = new User($user_id, null, null, null, $password, null, null, null, null, null, null, null, null, null);
     $user_dao = new UserDAO();
     if ($user_dao->check_password($user)) {
-        $user = $user_dao->get_user_by_id($user_id);
-        $message = array_merge($message, array("CDF" => $user->getCDFSold(), "USD" => $user->getUSDSold()));
+        $transation_dao = new TransactionDAO();
+        $transation = $transation_dao->get_all_transaction_by_id('$user_id');
     } else
-        $message = array_merge($message, array('code' => -4));
+        $transation = array_merge($transation, array('code' => -4));
+}else {
+    $transation = array_merge($transation, array("amount" => '20.000', "code" =>'',"type" =>'UP', "datetime" => '10/08/19',"currency" => 'Fc'));    
 }
 ?>
