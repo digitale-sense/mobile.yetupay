@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../asset/css/materialise.css">
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
-    <title>Transferer</title>
+    <title>Recharger</title>
 </head>
 
 <body>
