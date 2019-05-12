@@ -76,3 +76,9 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     line-height: normal;
 
 }
+#main-logo{
+    border: 2px solid #3A79B2;
+    border-radius: 50%;
+    padding-left: 5px;
+    margin: 15px;
+}

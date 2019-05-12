@@ -53,7 +53,7 @@
                                     </div>
                                 <?php } ?>
                                 <div class="col s12">
-                                    <button class="btn right tuma yetu-blue btn-action" id="Fsignin" type="submit" name="action">
+                                    <button class="waves-effect waves-light btn right tuma yetu-blue btn-action" id="Fsignin" type="submit" name="action">
                                         Se connecter
                                     </button>
                                 </div>
