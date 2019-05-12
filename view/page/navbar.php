@@ -12,7 +12,7 @@
         </ul>
         <ul class="left hide-on-large-only">
             <li>
-                <a href="sass.html">
+                <a data-target="slide-out" class="sidenav-trigger">
                     <i class="material-icons" id="icon-menu">menu</i>
                 </a>
             </li>
