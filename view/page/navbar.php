@@ -1,4 +1,4 @@
-<nav class="yetu-orange">
+<nav class="yetu-orange z-depth-0">
     <div class="nav-wrapper">
         <a href="home.php" class="brand-logo">
             <object class="my-1-2" data="../asset/images/yetupay_blanc.svg" height="50" type="image/svg+xml">
