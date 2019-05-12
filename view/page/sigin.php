@@ -43,8 +43,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="mdp" type="password" required>
-                                        <label for="mdp">Confirmez le mot de passe</label>
+                                        <input id="cmdp" type="password" required>
+                                        <label for="cmdp">Confirmez le mot de passe</label>
                                         <i class="material-icons logicon pass" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
