@@ -19,7 +19,7 @@
                 <img src="../asset/images/yetupay.png" alt="YetuPay" id="main-logo">
             </div>
             <div class="row">
-                <div class="col s12 card m6 offset-m3 radius z-depth-3">
+                <div class="col s12 card m6 offset-m3 radius z-depth-3 py-2">
                     <div class="container">
                         <div id="log">
                             <form action="#" class="col s12" id="connectForm">

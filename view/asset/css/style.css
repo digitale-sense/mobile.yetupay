@@ -63,7 +63,7 @@ header{
 .violet{
     background-color: #D24C8F !important;
 }
-.py-2{
+.row .col.py-2{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
