@@ -10,5 +10,12 @@
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
+        <ul class="left hide-on-large-only">
+            <li>
+                <a href="sass.html">
+                    <i class="material-icons" id="icon-menu">menu</i>
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
