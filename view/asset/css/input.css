@@ -65,3 +65,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 .select-wrapper input.select-dropdown:focus {
     border-bottom: 1px solid #3A79B2
 }
+[type="checkbox"]:checked + span:not(.lever)::before {
+    border-right: 2px solid #3A79B2;
+    border-bottom: 2px solid #3A79B2;
+}
