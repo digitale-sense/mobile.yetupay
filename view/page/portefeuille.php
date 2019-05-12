@@ -116,5 +116,5 @@ require_once('../../controller/user/sold.php');
     </div>
     <!-- End Screen off transaction -->
 </body>
-
+<script src="../asset/js/sidenav-initer.js"></script>
 </html>
