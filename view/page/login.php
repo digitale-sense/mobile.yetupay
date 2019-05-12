@@ -71,7 +71,6 @@
 </body>
 <script src="../asset/js/pass-view.js"></script>
 <script>
-    
     <?php if (isset($_GET['dev_key'])) { ?> DEV_KEY = '<?= $_GET['dev_key'] ?>';
     <?php } ?>
 </script>
