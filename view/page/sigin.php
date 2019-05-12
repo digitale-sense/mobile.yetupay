@@ -38,14 +38,14 @@
                                     <div class="input-field col s12">
                                         <input id="mdp" type="password" required>
                                         <label for="mdp">Mot de passe</label>
-                                        <i class="material-icons logicon pass" title="Afficher le mot de passe" id="mdpi">visibility</i>
+                                        <i class="material-icons logicon pass" data-input="mdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input id="cmdp" type="password" required>
                                         <label for="cmdp">Confirmez le mot de passe</label>
-                                        <i class="material-icons logicon pass" title="Afficher le mot de passe" id="mdpi">visibility</i>
+                                        <i class="material-icons logicon pass" data-input="cmdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -75,7 +75,7 @@
         passicons = document.querySelectorAll('.pass');
         passicons.forEach(passicon => {
             passicon.addEventListener('click', function(e) {
-                passID = e.target.id.substring(0, e.target.id.length - 1);
+                passID = e.target.getAttribute('data-input');
                 if (e.target.innerText == 'visibility') {
                     e.target.innerText = 'visibility_off';
                     e.target.title = "Cacher le mot de passe";
