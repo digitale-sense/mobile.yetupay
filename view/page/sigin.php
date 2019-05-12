@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col s12 card m6 offset-m3 radius z-depth-3 py-2">
                     <div class="container">
-                        <div id="log">
+                        <div id="sign">
                             <form action="#" class="col s12" id="connectForm">
                                 <div class="row">
                                     <div class="col s12">
