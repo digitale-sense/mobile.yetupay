@@ -51,6 +51,11 @@
                                         </div>
                                     </div>
                                 <?php } ?>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <a href="sign.php">vous n'avez pas de compte?</a>
+                                    </div>
+                                </div>
                                 <div class="col s12">
                                     <button class="waves-effect waves-light btn right tuma yetu-blue btn-action" id="Fsignin" type="submit" name="action">
                                         Se connecter
