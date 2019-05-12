@@ -22,11 +22,11 @@ require_once('../../controller/user/sold.php');
 <body>
     <header class="yetu-orange">
         <?php
-            include_once('navbar.php');
+        include_once('navbar.php');
         ?>
         <nav class="z-depth-0 yetu-orange">
             <div class="nav-wrapper">
-                <div class="row">
+                <div class="row mt-1">
                     <div class="col s10">
                         <h5 class="white-text">Mon portefeuille</h5>
                     </div>
@@ -117,4 +117,5 @@ require_once('../../controller/user/sold.php');
     <!-- End Screen off transaction -->
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
+
 </html>
