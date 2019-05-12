@@ -1,6 +1,6 @@
-<nav>
+<nav class="yetu-orange">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
+        <a href="home.php" class="brand-logo">
             <object class="my-1-2" data="../asset/images/yetupay_blanc.svg" height="50" type="image/svg+xml">
                 <embed class="my-1-2" src="../asset/images/yetupay_blanc.svg" height="50" type="image/svg+xml" />
             </object>
