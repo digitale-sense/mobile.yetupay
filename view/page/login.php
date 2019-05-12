@@ -53,7 +53,7 @@
                                 <?php } ?>
                                 <div class="row">
                                     <div class="col s12">
-                                        <a href="sign.php">vous n'avez pas de compte?</a>
+                                        <a href="signin.php">vous n'avez pas de compte?</a>
                                     </div>
                                 </div>
                                 <div class="col s12">
