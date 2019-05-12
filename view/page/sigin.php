@@ -9,7 +9,7 @@
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/input.css">
-    <title>Connexion</title>
+    <title>Inscription</title>
 </head>
 
 <body>
