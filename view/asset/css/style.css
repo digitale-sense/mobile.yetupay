@@ -29,6 +29,9 @@
 .yetu-orange{
     background-color: #ED6F43 !important;
 }
+.yetu-orange-text{
+    color: #ED6F43;
+}
 header{
     height: 220px;
 }
@@ -98,4 +101,7 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
 
 nav .sidenav-trigger {
     margin: 0;
+}
+.name strong{
+    font-weight: bolder;
 }
