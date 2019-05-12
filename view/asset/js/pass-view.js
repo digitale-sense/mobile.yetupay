@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     passicons = document.querySelectorAll('.pass');
     passicons.forEach(passicon => {
         passicon.addEventListener('click', function (e) {
-            passID = e.target.id.substring(0, e.target.id.length - 1);
+            passID = e.target.getAttribute('data-input');
             if (e.target.innerText == 'visibility') {
                 e.target.innerText = 'visibility_off';
                 e.target.title = "Cacher le mot de passe";
