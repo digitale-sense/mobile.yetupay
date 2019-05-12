@@ -105,3 +105,6 @@ nav .sidenav-trigger {
 .name strong{
     font-weight: bolder;
 }
+ul.right .btn-floating{
+    margin-right: 0;
+}
