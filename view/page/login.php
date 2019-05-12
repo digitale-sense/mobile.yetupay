@@ -32,7 +32,6 @@
                                     <div class="input-field col s12">
                                         <input id="number" type="text" required>
                                         <label for="number">Numéro de téléphone</label>
-                                        <i class="material-icons logicon tooltipped" data-position="top" data-tooltip="Le numéro de votre compte mobile money">info_outline</i>
                                     </div>
                                 </div>
                                 <div class="row">
