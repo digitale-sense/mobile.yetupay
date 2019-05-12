@@ -38,7 +38,7 @@
                                     <div class="input-field col s12">
                                         <input id="mdp" type="password" required>
                                         <label for="mdp">Mot de passe</label>
-                                        <i class="material-icons logicon pass" title="Afficher le mot de passe" id="mdpi">visibility</i>
+                                        <i class="material-icons logicon pass" data-input="mdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
                                 <?php if (!isset($_GET['dev_key'])) { ?>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col s12">
                                     <button class="waves-effect waves-light btn right tuma yetu-blue btn-action" id="Fsignin" type="submit" name="action">
-                                        Se connecterConnexion
+                                        Se connecter
                                     </button>
                                 </div>
                             </form>
