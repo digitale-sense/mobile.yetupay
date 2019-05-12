@@ -69,6 +69,7 @@
         </div>
     </section>
 </body>
+<script src="../asset/js/pass-view.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.tooltipped');
