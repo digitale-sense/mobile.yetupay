@@ -92,3 +92,7 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     position: relative;
     top: 1rem;
 }
+
+nav .sidenav-trigger {
+    margin: 0;
+}
