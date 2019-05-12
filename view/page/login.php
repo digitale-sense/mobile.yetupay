@@ -66,9 +66,6 @@
     </section>
 </body>
 <script>
-    var instance = M.Tabs.init(document.querySelectorAll('.tabs'), {
-        swipeable: true
-    });
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.tooltipped');
         var instances = M.Tooltip.init(elems, {
@@ -90,7 +87,6 @@
             });
         });
     });
-    document.querySelector('.carousel').style.height = '340px';
     <?php if (isset($_GET['dev_key'])) { ?> DEV_KEY = '<?= $_GET['dev_key'] ?>';
     <?php } ?>
 </script>
