@@ -5,12 +5,12 @@
                 <embed class="my-1-2" src="../asset/images/yetupay_blanc.svg" height="50" type="image/svg+xml" />
             </object>
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right hide-on-small-only">
             <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
-        <ul class="left hide-on-large-only">
+        <ul class="left hide-on-med-and-up">
             <li>
                 <a data-target="slide-out" class="sidenav-trigger">
                     <i class="material-icons" id="icon-menu">menu</i>
