@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col s12">
-                                        <a href="log.php">vous avez déjà un compte?</a>
+                                        <a href="login.php">vous avez déjà un compte?</a>
                                     </div>
                                 </div>
                                 <div class="col s12">
