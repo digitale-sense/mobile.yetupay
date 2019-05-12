@@ -6,9 +6,8 @@
             </object>
         </a>
         <ul id="nav-mobile" class="right hide-on-small-only">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+            <li><a href="#!" class="waves-effect">Acceuil</a></li>
+            <li><a href="#!" class="waves-effect">Développeur</a></li>
         </ul>
         <ul class="left hide-on-med-and-up">
             <li>
@@ -28,10 +27,10 @@
                     <span class="black-text email">jdandturk@gmail.com</span>
                 </div>
             </li>
-            <li><a href="#!"><i class="material-icons">home</i>Acceuil</a></li>
-            <li><a href="#!"><i class="material-icons">code</i>Développeur</a></li>
-            <li><a href="#!"><i class="material-icons">sim_card</i>Mes numéros</a></li>
-            <li><a href="#!"><i class="material-icons">info</i>Infos personnelles</a></li>
+            <li><a href="#!" class="waves-effect"><i class="material-icons">home</i>Acceuil</a></li>
+            <li><a href="#!" class="waves-effect"><i class="material-icons">code</i>Développeur</a></li>
+            <li><a href="#!" class="waves-effect"><i class="material-icons">sim_card</i>Mes numéros</a></li>
+            <li><a href="#!" class="waves-effect"><i class="material-icons">info</i>Infos personnelles</a></li>
             <li>
                 <div class="divider"></div>
             </li>
