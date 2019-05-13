@@ -14,7 +14,7 @@
 <body>
     <header class="yetu-orange">
         <?php
-            include_once('navbar.php');
+        include_once('navbar.php');
         ?>
         <nav class="z-depth-0 yetu-orange">
             <div class="nav-wrapper">
@@ -67,5 +67,5 @@
         </div>
     </div>
 </body>
-
+<script src="../asset/js/sidenav-initer.js"></script>
 </html>
