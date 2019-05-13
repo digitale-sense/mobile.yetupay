@@ -18,13 +18,10 @@
         ?>
         <nav class="z-depth-0 yetu-orange">
             <div class="nav-wrapper">
-                <div class="row">
+                <div class="row mt-1">
                     <div class="col s10">
                         <a href="portefeuille.php">
-                            <h5 class="white-text">
-                                <i class="material-icons left">arrow_back</i>
-                                <span class="left">Recharger</span>
-                            </h5>
+                            <h5 class="white-text">Recharger</h5>
                         </a>
                     </div>
                     <div class="col s2">
@@ -68,4 +65,5 @@
     </div>
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
+
 </html>
