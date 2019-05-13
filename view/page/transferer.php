@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+    <script src="../asset/js/sidenav-initer.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('select');
