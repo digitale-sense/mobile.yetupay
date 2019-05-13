@@ -16,7 +16,6 @@ if(isset($_GET['user_id'],$_GET['password'])){
     }
     else
         $message = array_merge($message, array('code' => -4));
-    
 }
 
 ?>

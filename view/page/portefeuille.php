@@ -1,5 +1,4 @@
-<?php 
-
+<?php
     require_once('../../controller/user/sold.php');
     require_once('../../controller/user/transations.php');
 ?>
@@ -72,7 +71,7 @@
             <a href="recharge.php" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
         </div>
         <div class="col s6 center">
-            <a href="transferer.php" class="waves-effect btn-action waves-light yetu-blue btn">Transferer</a>
+            <a href="transferer.php?user_id=<?php echo $_GET['user_id']; ?>"class="waves-effect btn-action waves-light yetu-blue btn">Transferer</a>
         </div>
     </div>
     <!-- End Controlle button -->
