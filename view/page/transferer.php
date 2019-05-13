@@ -14,9 +14,12 @@
 
 <body>
     <header class="yetu-orange">
+        <?php
+        include_once('navbar.php');
+        ?>
         <nav class="z-depth-0 yetu-orange">
             <div class="nav-wrapper">
-                <div class="row">
+                <div class="row mt-1">
                     <div class="col s10">
                         <a href="portefeuille.php">
                             <h5 class="white-text">
