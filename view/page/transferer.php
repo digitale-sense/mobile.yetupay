@@ -65,7 +65,7 @@
                                 <label>Devise</label>
                             </div>
                             <div class="col s12">
-                                <button class="btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
+                                <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
                                     Transferer
                                 </button>
                             </div>

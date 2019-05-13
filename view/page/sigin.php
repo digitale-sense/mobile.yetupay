@@ -9,7 +9,7 @@
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/input.css">
-    <title>Connexion</title>
+    <title>Inscription</title>
 </head>
 
 <body>
@@ -21,11 +21,11 @@
             <div class="row">
                 <div class="col s12 card m6 offset-m3 radius z-depth-3 py-2">
                     <div class="container">
-                        <div id="log">
+                        <div id="sign">
                             <form action="#" class="col s12" id="connectForm">
                                 <div class="row">
                                     <div class="col s12">
-                                        <h5 style="margin-top:0">Connectez-vous</h5>
+                                        <h5 style="margin-top:0">Inscrivez-vous</h5>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -41,19 +41,16 @@
                                         <i class="material-icons logicon pass" data-input="mdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
-                                <?php if (!isset($_GET['dev_key'])) { ?>
-                                    <div class="row">
-                                        <div class="col s12">
-                                            <label>
-                                                <input type="checkbox" id="stay_connected_log" />
-                                                <span>Rester connecté</span>
-                                            </label>
-                                        </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="cmdp" type="password" required>
+                                        <label for="cmdp">Confirmez le mot de passe</label>
+                                        <i class="material-icons logicon pass" data-input="cmdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
-                                <?php } ?>
+                                </div>
                                 <div class="row">
                                     <div class="col s12">
-                                        <a href="sigin.php">vous n'avez pas de compte?</a>
+                                        <a href="login.php">vous avez déjà un compte?</a>
                                     </div>
                                 </div>
                                 <div class="col s12">

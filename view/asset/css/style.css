@@ -29,8 +29,11 @@
 .yetu-orange{
     background-color: #ED6F43 !important;
 }
+.yetu-orange-text{
+    color: #ED6F43;
+}
 header{
-    height: 150px;
+    height: 220px;
 }
 #bala-card,
 .back-top {
@@ -63,7 +66,7 @@ header{
 .violet{
     background-color: #D24C8F !important;
 }
-.py-2{
+.row .col.py-2{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -71,8 +74,37 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.mt-1{
+    margin-top: 1rem;
+}
+
+.my-1-2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
 nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     line-height: normal;
 
+}
+#main-logo{
+    border: 2px solid #3A79B2;
+    border-radius: 50%;
+    padding-left: 5px;
+    margin: 15px;
+}
+
+#icon-menu{
+    position: relative;
+    top: 1rem;
+}
+
+nav .sidenav-trigger {
+    margin: 0;
+}
+.name strong{
+    font-weight: bolder;
+}
+ul.right .btn-floating{
+    margin-right: 0;
 }
