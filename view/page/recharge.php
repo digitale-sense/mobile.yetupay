@@ -21,7 +21,10 @@
                 <div class="row mt-1">
                     <div class="col s10">
                         <a href="portefeuille.php">
-                            <h5 class="white-text">Recharger</h5>
+                            <h5 class="white-text">
+                                <i class="material-icons left">arrow_back</i>
+                                <span class="left">Recharger</span>
+                            </h5>
                         </a>
                     </div>
                     <div class="col s2">
