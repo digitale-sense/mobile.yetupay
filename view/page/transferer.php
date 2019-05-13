@@ -41,29 +41,30 @@
     <div class="row" id="bala-card">
         <div class="col s12">
             <div class="container">
-                <form action="#" class="col s12 card z-depth-3 radius py2 " id="inscriptForm">
+                <form action="../../controller/user/transfer.php" method="post" class="col s12 card z-depth-3 radius py2 " id="inscriptForm">
                     <div class="container">
                         <h5>Remplissez</h5>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="number" name="number" type="text" required>
+                                <input id="number" name="receiver_login" type="text" required>
                                 <label for="number">Numéro du déstinaire</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="pwd" name="pwd" type="password" required>
+                                <input id="pwd" name="password" type="password" required>
                                 <label for="pwd">Mot de passe</label>
                             </div>
                             <div class="input-field col s8">
-                                <input id="anount" type="text" required>
+                                <input id="anount" name='amount'type="text" required>
                                 <label for="anount">Somme</label>
                             </div>
                             <div class="input-field col s4">
-                                <select>
-                                    <option value="1">CDF</option>
-                                    <option value="2">USD</option>
+                                <select name = 'currency'> 
+                                    <option value="CDF">CDF</option>
+                                    <option value="USD">USD</option>
                                 </select>
                                 <label>Devise</label>
                             </div>
+                            <input type="hidden" name ="user_id" value= "<?php echo $_GET['user_id']?>">
                             <div class="col s12">
                                 <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
                                     Transferer
