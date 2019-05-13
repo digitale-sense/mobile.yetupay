@@ -3,6 +3,7 @@
     require_once('../../controller/user/transations.php');
 ?>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,15 @@
     <link rel="stylesheet" href="../asset/css/style.css">
     <title>Mon portefeuille</title>
 </head>
+
 <body>
     <header class="yetu-orange">
+        <?php
+        include_once('navbar.php');
+        ?>
         <nav class="z-depth-0 yetu-orange">
             <div class="nav-wrapper">
-                <div class="row">
+                <div class="row mt-1">
                     <div class="col s10">
                         <h5 class="white-text">Mon portefeuille</h5>
                     </div>
@@ -105,4 +110,6 @@
     </div>
     <!-- End Screen off transaction -->
 </body>
+<script src="../asset/js/sidenav-initer.js"></script>
+
 </html>

@@ -66,7 +66,7 @@
                             </div>
                             <input type="hidden" name ="user_id" value= "<?php echo $_GET['user_id']?>">
                             <div class="col s12">
-                                <button class="btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
+                                <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
                                     Transferer
                                 </button>
                             </div>
