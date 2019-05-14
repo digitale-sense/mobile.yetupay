@@ -16,8 +16,10 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
         $amount = $_POST['amount'];
         $currency = $_POST['currency'];
         $sold_available = ($currency == "USD") ? $sender->getUSDSold() : $sender->getCDFSold();
-        if($sold_available < $amount)
-            echo "-2";
+        if($sold_available < $amount){
+            $m = 'Votre compte est insuffisante';
+            header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+        }
         else{
             $login = htmlspecialchars($_POST['receiver_login']);
             $receiver = new User(null,null,$login,$login,null,$login,$login,$login,$login,null,null,null,null,null);
@@ -28,14 +30,22 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
                 // var_dump($sender,$receiver,$amount,$currency);
                 $transfer_dao->transfer($sender,$receiver,$amount,$currency);
                 $message = array('state' => 1);
+                $m='Le transfert a reussi';
+                header('location: ../../view/page/transferer.php?user_id='. $_POST['user_id'] .'&m='.$m);
             }
-            else
-                $message = array('state' => -1);
+            else{
+                $m = 'Destinataire non authentifié';
+                header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+            }
         }
     }
-    else
-        $message = array('state' => -4);
+    else{
+        $m = 'Mot de passe incorret';
+        header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+    }
 }
-else
-    $message = array('state' => -5);
+else{
+    $m = 'Reverifier les champs fournies';
+    header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+}
 ?>
