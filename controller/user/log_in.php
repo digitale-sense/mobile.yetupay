@@ -27,12 +27,13 @@ if(isset($_POST['password'])){
         $user = new User($id,null,$pseudo,$email,$password,null,null,null,$phone_number,null,null,null,null,$connection_device);
     else
         $user = new User($id,null,$pseudo,$email,$password,null,null,null,null,null,null,null,null,$connection_device);
-        
+
     $user_dao = new UserDAO();
     $id = $user_dao->check_log_in_datas($user);
     
     if(is_null($id)){
         $message = array_merge($message, array('code' => -4));
+        header("Location: ../../view/page/login.php?code=".$message['code']);
     }elseif($id>0){
         $user->setId($id);
         $user_dao->update_log_in_informations($user);
