@@ -27,15 +27,15 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
                 $transfer_dao = new TransferDAO();
                 // var_dump($sender,$receiver,$amount,$currency);
                 $transfer_dao->transfer($sender,$receiver,$amount,$currency);
-                
+                $message = array('state' => 1);
             }
             else
-                echo "-1";
+                $message = array('state' => -1);
         }
     }
     else
-        echo "-4";
+        $message = array('state' => -4);
 }
 else
-    echo "NO";
+    $message = array('state' => -5);
 ?>
