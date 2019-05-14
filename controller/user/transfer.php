@@ -17,7 +17,7 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
         $currency = $_POST['currency'];
         $sold_available = ($currency == "USD") ? $sender->getUSDSold() : $sender->getCDFSold();
         if($sold_available < $amount){
-            $m = 'Votre compte est insuffisante';
+            $m = 'Votre compte est insuffisant';
             header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
         }
         else{
