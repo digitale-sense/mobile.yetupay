@@ -27,7 +27,7 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
                 $transfer_dao = new TransferDAO();
                 // var_dump($sender,$receiver,$amount,$currency);
                 $transfer_dao->transfer($sender,$receiver,$amount,$currency);
-                
+                header("Location: ../../view/page/portefeuille.php?user_id=".$_POST['user_id']."&password=".$_POST['password']);                
             }
             else
                 echo "-1";
