@@ -57,17 +57,17 @@
                                 <label for="pwd">Mot de passe</label>
                             </div>
                             <div class="input-field col s8">
-                                <input id="anount" name='amount'type="text" required>
+                                <input id="anount" name='amount' type="text" required>
                                 <label for="anount">Somme</label>
                             </div>
                             <div class="input-field col s4">
-                                <select name = 'currency'> 
+                                <select name='currency'>
                                     <option value="CDF">CDF</option>
                                     <option value="USD">USD</option>
                                 </select>
                                 <label>Devise</label>
                             </div>
-                            <input type="hidden" name ="user_id" value= "<?php echo $_GET['user_id']?>">
+                            <input type="hidden" name="user_id" value="<?php echo $_GET['user_id'] ?>">
                             <div class="col s12">
                                 <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
                                     Transferer
@@ -85,6 +85,7 @@
             var elems = document.querySelectorAll('select');
             var instances = M.FormSelect.init(elems);
         });
+        <?php if (isset($_GET['m'])) echo "M.toast({html: '" . $_GET['m'] . "'})" ?>
     </script>
 </body>
 
