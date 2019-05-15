@@ -22,7 +22,7 @@
                 <div class="col s12 card m6 offset-m3 radius z-depth-3 py-2">
                     <div class="container">
                         <div id="sign">
-                            <form action="#" class="col s12" id="connectForm">
+                            <form action="../../controller/user/sign_in.php" class="col s12" method="post" id="connectForm">
                                 <div class="row">
                                     <div class="col s12">
                                         <h5 style="margin-top:0">Inscrivez-vous</h5>
@@ -30,20 +30,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="number" type="text" required>
+                                        <input id="number" type="text" name="phone_number" required>
                                         <label for="number">Numéro de téléphone</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="mdp" type="password" required>
+                                        <input id="mdp" type="password" name="password"required>
                                         <label for="mdp">Mot de passe</label>
                                         <i class="material-icons logicon pass" data-input="mdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input id="cmdp" type="password" required>
+                                        <input id="cmdp" type="password" name="password" required>
                                         <label for="cmdp">Confirmez le mot de passe</label>
                                         <i class="material-icons logicon pass" data-input="cmdp" title="Afficher le mot de passe" id="mdpi">visibility</i>
                                     </div>

@@ -1,21 +1,21 @@
 <?php
 session_start();
-define('PATH', '../../');
 $message = array();
-if(isset($_POST['password'])){
-    require_once(PATH . 'db_config/connection_manager.class.php');
-    require_once(PATH . 'db_config/db_params.class.php');
-    spl_autoload_register(function ($class) {
-        $file = strpos($class, "DAO") > 1 ? 'm/dao/' . strtolower((substr($class, 0, strpos($class, "Manager")))) . '.dao.php' : 'm/structure/' . strtolower($class) . '.class.php';
-        require_once(PATH . $file);
-    });
+if(isset($_POST['password'])){ 
+    require_once('../../db_config/connection_manager.class.php');
+    require_once('../../db_config/db_params.class.php');
+    require_once('../../model/structure/user.class.php');
+    require_once('../../model/dao/user.dao.php');
+    require_once('../../model/structure/transaction.class.php');
+    require_once('../../model/dao/transfer.dao.php');
+
     $id = (isset($_POST['id'])) ? $_POST['user_id'] : null;
     $pseudo = (isset($_POST['pseudo'])) ? htmlspecialchars($_POST['pseudo']) : null;
     $email = (isset($_POST['email'])) ? htmlspecialchars($_POST['email']) : null;
     $password = htmlspecialchars($_POST['password']);
     $phone_number = (isset($_POST['phone_number'])) ? htmlspecialchars($_POST['phone_number']) : null;
     $operator = (isset($_POST['operator'])) ? $_POST['operator'] : User::getOperator($phone_number);
-    $connection_device = htmlspecialchars($_POST['connection_device']);
+    $connection_device = (isset($_POST['connection_device'])) ? htmlspecialchars($_POST['connection_device']) : null;
     // 
     if($operator == 0)
         $user = new User($id,null,$pseudo,$email,$password,$phone_number,null,null,null,null,null,null,null,$connection_device);
@@ -27,13 +27,14 @@ if(isset($_POST['password'])){
         $user = new User($id,null,$pseudo,$email,$password,null,null,null,$phone_number,null,null,null,null,$connection_device);
     else
         $user = new User($id,null,$pseudo,$email,$password,null,null,null,null,null,null,null,null,$connection_device);
-    //
+
     $user_dao = new UserDAO();
     $id = $user_dao->check_log_in_datas($user);
     
-    if(is_null($id))
+    if(is_null($id)){
         $message = array_merge($message, array('code' => -4));
-    elseif($id>0){
+        header("Location: ../../view/page/login.php?code=".$message['code']);
+    }elseif($id>0){
         $user->setId($id);
         $user_dao->update_log_in_informations($user);
         $user = $user_dao->get_user_by_id($id);
@@ -50,10 +51,12 @@ if(isset($_POST['password'])){
             $_SESSION['sign_in_datetime'] = $user->getSignInDatetime();
             $_SESSION['last_connection_datetime'] = $user->getLastConnectionDatetime();
             $_SESSION['last_connection_device'] = $user->getLastConnectionDevice();
+            header("Location: ../../view/page/portefeuille.php?user_id=".$user->getId()."&password=".$_POST['password']);            
         }
         else{
             $_SESSION['user_id'] = $user->getId();
             $_SESSION['user_pass'] = $_POST['password'];
+            header("Location: ../../view/page/portefeuille.php?user_id=".$user->getId()."&password=".$_POST['password']);
         }
     }
 }
