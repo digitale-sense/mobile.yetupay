@@ -71,18 +71,30 @@
     <div id="adding_number" class="modal">
         <form action="#" method="post">
             <div class="modal-content">
-                <div class="input-field col s12 m8 offset-m2">
-                    <select class="icons">
-                        <option value="" disabled selected>Choisissez un opérateur</option>
-                        <option value="" data-icon="../asset/images/airtel.png" class="left">Airtel Money</option>
-                        <option value="" data-icon="../asset/images/m-pesa.jpg" class="left">M-Pesa</option>
-                        <option value="" data-icon="../asset/images/orange.png" class="left">Orange Money</option>
-                    </select>
-                    <label>Choisissez un opérateur</label>
+                <h5>Ajouter un numéro</h5><br>
+                <div class="row">
+                    <div class="input-field col s12 m8 offset-m2">
+                        <select class="icons">
+                            <option value="" disabled selected>Opérateur</option>
+                            <option value="" data-icon="../asset/images/airtel.png" class="left">Airtel Money</option>
+                            <option value="" data-icon="../asset/images/m-pesa.jpg" class="left">M-Pesa</option>
+                            <option value="" data-icon="../asset/images/orange.png" class="left">Orange Money</option>
+                        </select>
+                        <label>Opérateur</label>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                <div class="row">
+                    <div class="input-field col s12 m8 offset-m2">
+                        <input id="numero" type="text">
+                        <label for="numero">Numéro</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <a href="#!" class="waves-effect right yetu-blue white-text btn-flat">Ajouter</a>
+                        <a href="#!" class="modal-close right waves-effect red-text btn-flat">Fermer</a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
