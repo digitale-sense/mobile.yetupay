@@ -6,7 +6,7 @@ if(isset($_SESSION['user_id'])){
     require_once('../../model/structure/user.class.php');
     require_once('../../model/dao/user.dao.php'); 
 
-    $user_id = htmlspecialchars($_GET['user_id']);
+    $user_id = htmlspecialchars($_SESSION['user_id']);
     // $password = htmlspecialchars($_GET['password']);  
     $user = new User($user_id,null,null,null,null,null,null,null,null,null,null,null,null,null);
     $user_dao = new UserDAO();

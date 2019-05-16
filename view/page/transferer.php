@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +67,7 @@
                                 </select>
                                 <label>Devise</label>
                             </div>
-                            <input type="hidden" name="user_id" value="<?php echo $_GET['user_id'] ?>">
+                            <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'] ?>">
                             <div class="col s12">
                                 <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
                                     Transferer
