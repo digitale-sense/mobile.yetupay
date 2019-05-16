@@ -69,6 +69,24 @@
                         <input id="name" type="text">
                         <label for="name">Nom</label>
                     </div>
+                    <div class="input-field col s12 m8 offset-m2">
+                        <input id="domaine" type="text">
+                        <label for="domaine">Domaine</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Choisir le type</option>
+                            <option value="w">Web</option>
+                            <option value="m">Mobile</option>
+                            <option value="d">Desktop</option>
+                            <option value="i">IoT</option>
+                            </select>
+                        <label>Type de projet</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <label for="description">Description</label>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col s12">
@@ -83,5 +101,5 @@
 <script src="../asset/js/sidenav-initer.js"></script>
 <script src="../asset/js/modal-initer.js"></script>
 <script src="../asset/js/dropdown-initer.js"></script>
-
+<script src="../asset/js/select-initer.js"></script>
 </html>

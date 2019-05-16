@@ -137,3 +137,15 @@ header.second {
 .dropdown-content li>span {
     color: #3A79B2;
 }
+#ilarge{
+    font-size: 10rem;
+}
+.mt-3{
+    margin-top: 3rem;
+}
+.mb-0{
+    margin-bottom: 0;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
