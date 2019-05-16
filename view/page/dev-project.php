@@ -43,7 +43,7 @@
                 <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
                         <div class="col s2">
-                            <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">A</i></a>
+                            <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
                         </div>
                         <div class="col s10">
                             <p class="grey-text right">
@@ -51,8 +51,10 @@
                                     20/06/18
                                 </small>
                             </p>
-                            <h6 class="truncate no-margin bolder">Airtel Money</h6>
-                            <p class="truncate grey-text">097 063 1382</p>
+                            <h6 class="truncate no-margin bolder">LibTarta</h6>
+                            <p class="truncate grey-text">
+                                clé: TDDV50F06XDV5D06V1D0
+                            </p>
                         </div>
                     </div>
                     <?php if ($i != 3 - 1) { ?>
