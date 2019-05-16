@@ -106,15 +106,15 @@
         </form>
     </div>
     <div id="edit_pwd" class="modal radius">
-        <form action="../../" method="post">
+        <form action="../../controller/user/update_password.php" method="post">
             <div class="modal-content row">
                 <h6>Modifier le mot de passe</h6><br>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="old" type="text">
+                    <input id="old" name = "password" type="text">
                     <label for="old">Ancien</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="new" type="text">
+                    <input id="new" name = 'new_password' type="text">
                     <label for="new">Nouveau</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
