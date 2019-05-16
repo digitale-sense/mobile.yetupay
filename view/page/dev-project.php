@@ -9,7 +9,7 @@
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/input.css">
-    <title>Mes numéros</title>
+    <title>Mes projets</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <div class="nav-wrapper">
                 <div class="row mt-1">
                     <div class="col s10">
-                        <h5 class="white-text">Mes numéros</h5>
+                        <h5 class="white-text">Mes projets</h5>
                     </div>
                     <div class="col s2">
                         <ul class="right">
@@ -37,14 +37,13 @@
         </nav>
     </header>
 
-    <!-- Screen off transaction -->
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
                 <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
                         <div class="col s2">
-                            <img src="../asset/images/airtel.png" alt="airtel" width="100%" class="circle">
+                            <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">A</i></a>
                         </div>
                         <div class="col s10">
                             <p class="grey-text right">
@@ -63,7 +62,6 @@
             </div>
         </div>
     </div>
-    <!-- End Screen off transaction -->
 
     <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">add</i></a>
     <div id="adding_project" class="modal radius">
