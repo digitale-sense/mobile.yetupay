@@ -6,7 +6,7 @@
             </a>
             <ul id='account-dropdown' class='dropdown-content radius'>
                 <li><a href="info-perso.php">Infos personnelles</a></li>
-                <li><a href="#!">Déconnexion</a></li>
+                <li><a href="../../controller/deconnexion.php">Déconnexion</a></li>
             </ul>
         </li>
     </ul>
