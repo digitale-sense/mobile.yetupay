@@ -116,3 +116,14 @@ ul.right .btn-floating{
 .lettre{
     font-style: normal;
 }
+.carre{
+    height: 95px;
+    width: 95px;
+    border: 2px solid white;
+}
+.carre h4{
+    margin-top: 1.8rem;
+}
+header.second {
+    height: 350px;
+}

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="yetu-orange">
+    <header class="yetu-orange second">
         <?php
         include_once('navbar.php');
         ?>
@@ -33,10 +33,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="carre circle">
-                            
+                <div class="row center-align">
+                    <div class="col s4 offset-s4 center">
+                        <div class="carre second circle">
+                            <h4>L</h4>
                         </div>
                     </div>
                 </div>
