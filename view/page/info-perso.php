@@ -47,8 +47,8 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
-                <a class="btn-floating right half-top z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#edit_account">
-                    <i class="material-icons">edit</i>
+                <a class="btn-floating right half-top z-depth-3 btn-large waves-effect white modal-trigger" href="#edit_account">
+                    <i class="material-icons blue-text">edit</i>
                 </a>
                 <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
