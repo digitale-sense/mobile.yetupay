@@ -40,7 +40,7 @@
             <div class="card z-depth-3 radius">
                 <?php 
                     $i=0;
-                    foreach ($message['PHONE_NUMBER'] as $value) {
+                    foreach ($message['PHONE_NUMBER'] as $key =>$value) {
                         $operator='';
                         switch (User::getOperator($value)) {
                             case '0':
@@ -66,8 +66,8 @@
                                             <?php echo $user->getSignInDatetime(); ?>.
                                         </small>
                                     </p>
-                                    <h6 class="truncate no-margin bolder"><?php echo $operator ?></h6>
-                                    <p class="truncate grey-text"><?php echo $value ?></p>
+                                    <h6 class="truncate no-margin bolder"><?php echo $key; ?></h6>
+                                    <p class="truncate grey-text"><?php echo $value; ?></p>
                                 </div>
                             </div><?php 
                         }
