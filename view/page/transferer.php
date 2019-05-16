@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,6 +77,10 @@
     <script src="../asset/js/sidenav-initer.js"></script>
     <script src="../asset/js/select-initer.js"></script>
     <script src="../asset/js/dropdown-initer.js"></script>
+
+    <script>
+        <?= isset($_GET['m']) ? "M.toast({html: '" . $_GET['m'] . "'})" : "" ?>
+    </script>
 </body>
 
 </html>
