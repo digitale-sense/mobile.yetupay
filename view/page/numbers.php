@@ -69,16 +69,26 @@
 
     <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_number"><i class="material-icons">add</i></a>
     <div id="adding_number" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
+        <form action="#" method="post">
+            <div class="modal-content">
+                <div class="input-field col s12 m8 offset-m2">
+                    <select class="icons">
+                        <option value="" disabled selected>Choisissez un opérateur</option>
+                        <option value="" data-icon="../asset/images/airtel.png" class="left">Airtel Money</option>
+                        <option value="" data-icon="../asset/images/m-pesa.jpg" class="left">M-Pesa</option>
+                        <option value="" data-icon="../asset/images/orange.png" class="left">Orange Money</option>
+                    </select>
+                    <label>Choisissez un opérateur</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </form>
     </div>
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
 <script src="../asset/js/modal-initer.js"></script>
 <script src="../asset/js/select-initer.js"></script>
+
 </html>
