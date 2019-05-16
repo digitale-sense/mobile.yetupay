@@ -34,15 +34,28 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
+                <div class="row mb-0">
+                    <div class="col s3 right-align">
+                        <i class="material-icons medium mt-3 yetu-blue-text">android</i>
+                    </div>
+                    <div class="col s6 center">
+                        <i class="material-icons large yetu-blue-text" id="ilarge">code</i>
+                    </div>
+                    <div class="col s3 left-align">
+                        <i class="material-icons medium mt-3 yetu-blue-text">public</i>
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col offset-s1 s10">
+                        YetuPay veut offrir aux développeurs d’applications
+                        mobiles ou web (et de toute autre sorte de logiciel)
+                        une API qu’ils peuvent intégrer dans leurs projets en
+                        quelques clics ou lignes de code.
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col s4 right-align">
-                        <i class="material-icons medium mt-1">android</i>
-                    </div>
-                    <div class="col s4 center">
-                        <i class="material-icons large ilarge">code</i>
-                    </div>
-                    <div class="col s4 left-align">
-                        <i class="material-icons medium mt-1">public</i>
+                    <div class="col s12 center">
+                        <a class="waves-effect btn-action yetu-blue waves-light btn-small mb-2 btn-flat white-text">Créer un compte développeur</a>
                     </div>
                 </div>
             </div>
