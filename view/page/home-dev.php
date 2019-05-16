@@ -36,13 +36,13 @@
             <div class="card z-depth-3 radius">
                 <div class="row">
                     <div class="col s4 right-align">
-                        <i class="material-icons medium">android</i>
+                        <i class="material-icons medium mt-1">android</i>
                     </div>
                     <div class="col s4 center">
-                        <i class="material-icons large">code</i>
+                        <i class="material-icons large ilarge">code</i>
                     </div>
                     <div class="col s4 left-align">
-                        <i class="material-icons medium">public</i>
+                        <i class="material-icons medium mt-1">public</i>
                     </div>
                 </div>
             </div>
