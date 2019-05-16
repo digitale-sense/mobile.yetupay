@@ -65,26 +65,15 @@
     </div>
     <!-- End Screen off transaction -->
 
-    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_number"><i class="material-icons">add</i></a>
-    <div id="adding_number" class="modal radius">
+    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">add</i></a>
+    <div id="adding_project" class="modal radius">
         <form action="#" method="post">
             <div class="modal-content">
-                <h5>Ajouter un numéro</h5><br>
+                <h5>Ajouter un projet</h5><br>
                 <div class="row">
                     <div class="input-field col s12 m8 offset-m2">
-                        <select class="icons">
-                            <option value="" disabled selected>Opérateur</option>
-                            <option value="" data-icon="../asset/images/airtel.png" class="left">Airtel Money</option>
-                            <option value="" data-icon="../asset/images/m-pesa.jpg" class="left">M-Pesa</option>
-                            <option value="" data-icon="../asset/images/orange.png" class="left">Orange Money</option>
-                        </select>
-                        <label>Opérateur</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="numero" type="text">
-                        <label for="numero">Numéro</label>
+                        <input id="name" type="text">
+                        <label for="name">Nom</label>
                     </div>
                 </div>
                 <div class="row">
@@ -99,6 +88,5 @@
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
 <script src="../asset/js/modal-initer.js"></script>
-<script src="../asset/js/select-initer.js"></script>
 
 </html>
