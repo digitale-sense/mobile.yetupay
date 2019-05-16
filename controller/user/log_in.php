@@ -51,12 +51,12 @@ if(isset($_POST['password'])){
             $_SESSION['sign_in_datetime'] = $user->getSignInDatetime();
             $_SESSION['last_connection_datetime'] = $user->getLastConnectionDatetime();
             $_SESSION['last_connection_device'] = $user->getLastConnectionDevice();
-            header("Location: ../../view/page/portefeuille.php?user_id=".$user->getId()."&password=".$_POST['password']);            
+            header("Location: ../../view/page/portefeuille.php");            
         }
         else{
             $_SESSION['user_id'] = $user->getId();
             $_SESSION['user_pass'] = $_POST['password'];
-            header("Location: ../../view/page/portefeuille.php?user_id=".$user->getId()."&password=".$_POST['password']);
+            header("Location: ../../view/page/portefeuille.php");
         }
     }
 }
