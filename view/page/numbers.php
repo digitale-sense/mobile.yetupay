@@ -67,7 +67,7 @@
     </div>
     <!-- End Screen off transaction -->
 
-    <a id="adding-button" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>

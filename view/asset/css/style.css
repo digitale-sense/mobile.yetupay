@@ -108,3 +108,8 @@ nav .sidenav-trigger {
 ul.right .btn-floating{
     margin-right: 0;
 }
+#adding-button{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
