@@ -29,6 +29,10 @@
                                 <a class="btn-floating waves-effect btn-small z-depth-0 white dropdown-trigger" data-target='account-dropdown'>
                                     <i class="material-icons grey-text white">person</i>
                                 </a>
+                                <ul id='account-dropdown' class='dropdown-content radius'>
+                                    <li><a href="#!">Infos personnelles</a></li>
+                                    <li><a href="#!">Déconnexion</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -43,10 +47,6 @@
             </div>
         </nav>
     </header>
-    <ul id='account-dropdown' class='dropdown-content'>
-        <li><a href="#!"><i class="material-icons">info</i>Infos personnelles</a></li>
-        <li><a href="#!">Déconnxion</a></li>
-    </ul>
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
