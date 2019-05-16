@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../asset/css/materialise.css">
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/input.css">
     <title>Mes numéros</title>
 </head>
 
@@ -40,7 +41,7 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
-                <?php for ($i = 0; $i < 5; $i++) { ?>
+                <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
                         <div class="col s2">
                             <a class="btn-floating waves-effect waves-light btn-small z-depth-0 white">
@@ -58,7 +59,7 @@
                             <p class="truncate grey-text"># PP784575-1643-B46396</p>
                         </div>
                     </div>
-                    <?php if ($i != 5 - 1) { ?>
+                    <?php if ($i != 3 - 1) { ?>
                         <div class="divider"></div>
                     <?php } ?>
                 <?php } ?>
@@ -68,7 +69,7 @@
     <!-- End Screen off transaction -->
 
     <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_number"><i class="material-icons">add</i></a>
-    <div id="adding_number" class="modal">
+    <div id="adding_number" class="modal radius">
         <form action="#" method="post">
             <div class="modal-content">
                 <h5>Ajouter un numéro</h5><br>
@@ -91,8 +92,8 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-flat">Ajouter</a>
-                        <a href="#!" class="modal-close right waves-effect red-text btn-flat">Fermer</a>
+                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Ajouter</a>
+                        <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
             </div>
