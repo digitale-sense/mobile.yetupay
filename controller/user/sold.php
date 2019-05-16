@@ -1,6 +1,6 @@
 <?php
 $message = array();
-if(isset($_GET['user_id'])){
+if(isset($_SESSION['user_id'])){
     require_once('../../db_config/connection_manager.class.php');
     require_once('../../db_config/db_params.class.php');
     require_once('../../model/structure/user.class.php');
