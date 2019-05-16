@@ -127,3 +127,8 @@ ul.right .btn-floating{
 header.second {
     height: 350px;
 }
+.half-top{
+    position: absolute;
+    right: 1rem;
+    top: -28px;
+}
