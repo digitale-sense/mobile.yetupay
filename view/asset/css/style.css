@@ -132,3 +132,8 @@ header.second {
     right: 1rem;
     top: -28px;
 }
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #3A79B2;
+}
