@@ -82,17 +82,23 @@
     <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">edit</i></a>
     <div id="adding_project" class="modal radius">
         <form action="#" method="post">
-            <div class="modal-content">
-                <h5>Ajouter un projet</h5><br>
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="name" type="text">
-                        <label for="name">Nom</label>
-                    </div>
+            <div class="modal-content row">
+                <h6>Modifier mon compte</h6><br>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="name" type="text">
+                    <label for="name">Nom</label>
+                </div>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="pseudo" type="text">
+                    <label for="speudo">Pseudo</label>
+                </div>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="mail" type="email">
+                    <label for="mail">Mail</label>
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Ajouter</a>
+                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Modifier</a>
                         <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
