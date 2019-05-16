@@ -26,7 +26,7 @@
                     <div class="col s2">
                         <ul class="right">
                             <li>
-                                <a class="btn-floating waves-effect btn-small z-depth-0 white">
+                                <a class="btn-floating waves-effect btn-small z-depth-0 white dropdown-trigger" data-target='account-dropdown'>
                                     <i class="material-icons grey-text white">person</i>
                                 </a>
                             </li>
@@ -43,7 +43,10 @@
             </div>
         </nav>
     </header>
-
+    <ul id='account-dropdown' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons">info</i>Infos personnelles</a></li>
+        <li><a href="#!">Déconnxion</a></li>
+    </ul>
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
@@ -134,5 +137,6 @@
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
 <script src="../asset/js/modal-initer.js"></script>
+<script src="../asset/js/dropdown-initer.js"></script>
 
 </html>
