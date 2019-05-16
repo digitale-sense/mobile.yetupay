@@ -2,7 +2,6 @@
     session_start();
     require_once('../../controller/user/sold.php');
     require_once('../../controller/user/transations.php');
-    print_r($_SESSION);
 ?>
 <html lang="fr">
 

@@ -11,7 +11,7 @@ if(isset($_SESSION['user_id'])){
     $user = new User($user_id,null,null,null,null,null,null,null,null,null,null,null,null,null);
     $user_dao = new UserDAO();
     $user = $user_dao->get_user_by_id($user_id);
-    $message = array_merge($message, array("CDF" => $user->getCDFSold(), "USD" => $user->getUSDSold(),));
+    $message = array_merge($message, array("CDF" => $user->getCDFSold(), "USD" => $user->getUSDSold(),"PHONE_NUMBER"=>['Airtel' => $user->getTelAirtel(),'Orange' => $user->getTelOrange(),'Vodacom' => $user->getTelVodacom(),'Africell' => $user->getTelAfricell()]));
     // if($user_dao->check_password($user)){  
         
     // }

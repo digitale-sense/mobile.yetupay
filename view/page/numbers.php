@@ -1,6 +1,8 @@
-<?php session_start();?>
+<?php 
+    session_start();
+    require_once('../../controller/user/sold.php');
+?>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,25 +38,43 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
-                <?php for ($i = 0; $i < 3; $i++) { ?>
-                    <div class="card-content row">
-                        <div class="col s2">
-                            <img src="../asset/images/airtel.png" alt="airtel" width="100%" class="circle">
-                        </div>
-                        <div class="col s10">
-                            <p class="grey-text right">
-                                <small>
-                                    20/06/18
-                                </small>
-                            </p>
-                            <h6 class="truncate no-margin bolder">Airtel Money</h6>
-                            <p class="truncate grey-text">097 063 1382</p>
-                        </div>
-                    </div>
-                    <?php if ($i != 3 - 1) { ?>
-                        <div class="divider"></div>
-                    <?php } ?>
-                <?php } ?>
+                <?php 
+                    $i=0;
+                    foreach ($message['PHONE_NUMBER'] as $value) {
+                        $operator='';
+                        switch ($user->getOperator($value)) {
+                            case '0':
+                                $operator = 'airtel';
+                                break;
+                            case '1':
+                                $operator = 'orange'; 
+                                break;
+                            case '2':
+                                $operator = 'm-pesa';
+                            default:
+                                $operator = 'africell';
+                                break;
+                        }
+                        if(!empty($value)){?>
+                            <div class="card-content row">
+                                <div class="col s2">
+                                    <img src="../asset/images/<?php echo $operator ?>.png" alt="airtel" width="100%" class="circle">
+                                </div>
+                                <div class="col s10">
+                                    <p class="grey-text right">
+                                        <small>
+                                            <?php echo $user->getSignInDatetime(); ?>.
+                                        </small>
+                                    </p>
+                                    <h6 class="truncate no-margin bolder"><?php echo $operator ?></h6>
+                                    <p class="truncate grey-text"><?php echo $value ?></p>
+                                </div>
+                            </div><?php 
+                        }
+                        if ( !empty($value) && $i != 3 - 1) { ?>
+                            <div class="divider"></div><?php
+                        } ?><?php 
+                    } ?>
             </div>
         </div>
     </div>
