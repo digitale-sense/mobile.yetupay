@@ -9,6 +9,5 @@
         $trans = new Transaction(null, $user_id, null, null, null, null, null, null, null);
         $trans_dao = new TransactionDAO();
         $transaction = $trans_dao->getTrans($user_id);
-        header("Location: ../../view/page/portefeuille.php");
     }
 ?>
