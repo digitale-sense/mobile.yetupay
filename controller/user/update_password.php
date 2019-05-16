@@ -1,13 +1,11 @@
 <?php
-define('PATH', '../../');
 $message = array();
 if(isset($_POST['new_password'],$_POST['password'])){
-    require_once(PATH . 'db_config/connection_manager.class.php');
-    require_once(PATH . 'db_config/db_params.class.php');
-    spl_autoload_register(function ($class) {
-        $file = strpos($class, "DAO") > 1 ? 'm/dao/' . strtolower((substr($class, 0, strpos($class, "Manager")))) . '.dao.php' : 'm/structure/' . strtolower($class) . '.class.php';
-        require_once(PATH . $file);
-    });
+    require_once('../../db_config/connection_manager.class.php');
+    require_once('../../db_config/db_params.class.php');
+    require_once('../../model/structure/user.class.php');
+    require_once('../../model/dao/user.dao.php'); 
+
     $user_id = $_SESSION['user_id'];   
     $new_password = htmlspecialchars($_POST['new_password']);
     $password = htmlspecialchars($_POST['password']);
