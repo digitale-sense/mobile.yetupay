@@ -47,6 +47,9 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
+                <a class="btn-floating right half-top z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#edit_account">
+                    <i class="material-icons">edit</i>
+                </a>
                 <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
                         <div class="col s2">
@@ -70,17 +73,15 @@
                         <h6 class="truncate no-margin bolder mt-1">Mot de passe</h6>
                     </div>
                     <div class="col s2">
-                        <a class="btn-floating btn-flat waves-effect white">
-                            <i class="material-icons blue-text">edit</i>
+                        <a class="btn-floating btn-flat waves-effect white modal-trigger" href="#edit_pwd"">
+                            <i class=" material-icons blue-text">edit</i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">edit</i></a>
-    <div id="adding_project" class="modal radius">
+    <div id="edit_account" class="modal radius">
         <form action="#" method="post">
             <div class="modal-content row">
                 <h6>Modifier mon compte</h6><br>
@@ -95,6 +96,31 @@
                 <div class="input-field col s12 m8 offset-m2">
                     <input id="mail" type="email">
                     <label for="mail">Mail</label>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Modifier</a>
+                        <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="edit_pwd" class="modal radius">
+        <form action="#" method="post">
+            <div class="modal-content row">
+                <h6>Modifier le mot de passe</h6><br>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="old" type="text">
+                    <label for="old">Ancien</label>
+                </div>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="new" type="text">
+                    <label for="new">Nouveau</label>
+                </div>
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="confirm" type="email">
+                    <label for="confirm">Confirmer nouveau</label>
                 </div>
                 <div class="row">
                     <div class="col s12">
