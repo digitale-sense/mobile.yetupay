@@ -28,7 +28,8 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
                 $receiver = $user_dao->get_user_by_id($receiver_id);
                 $transfer_dao = new TransferDAO();
                 // var_dump($sender,$receiver,$amount,$currency);
-                $transfer_dao->transfer($sender,$receiver,$amount,$currency);
+                $transfer_dao->transfer($sender,$receiver,$amount,$currency);         
+              
                 $message = array('state' => 1);
                 $m='Le transfert a reussi';
                 header('location: ../../view/page/transferer.php?user_id='. $_POST['user_id'] .'&m='.$m);
