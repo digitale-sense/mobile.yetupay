@@ -55,6 +55,16 @@ if(isset($_POST['password'])){
         }
         else{
             $_SESSION['user_id'] = $user->getId();
+            $_SESSION['full_name'] = $user->getFullname();
+            $_SESSION['pseudo'] = $user->getPseudo();
+            $_SESSION['email'] = $user->getEmail();
+            $_SESSION['tel_airtel'] = $user->getTelAirtel();
+            $_SESSION['tel_orange'] = $user->getTelOrange();
+            $_SESSION['tel_vodacom'] = $user->getTelVodacom();
+            $_SESSION['tel_africell'] = $user->getTelAfricell();
+            $_SESSION['sign_in_datetime'] = $user->getSignInDatetime();
+            $_SESSION['last_connection_datetime'] = $user->getLastConnectionDatetime();
+            $_SESSION['last_connection_device'] = $user->getLastConnectionDevice();
             $_SESSION['user_pass'] = $_POST['password'];
             header("Location: ../../view/page/portefeuille.php");
         }

@@ -5,7 +5,7 @@
                 <i class="material-icons grey-text white">person</i>
             </a>
             <ul id='account-dropdown' class='dropdown-content radius'>
-                <li><a href="#!">Infos personnelles</a></li>
+                <li><a href="info-perso.php">Infos personnelles</a></li>
                 <li><a href="#!">Déconnexion</a></li>
             </ul>
         </li>
