@@ -44,9 +44,7 @@
                 <?php for ($i = 0; $i < 3; $i++) { ?>
                     <div class="card-content row">
                         <div class="col s2">
-                            <a class="btn-floating waves-effect waves-light btn-small z-depth-0 white">
-                                <i class="material-icons white-text violet">file_download</i>
-                            </a>
+                            <img src="../asset/images/airtel.png" alt="airtel" width="100%" class="circle">
                         </div>
                         <div class="col s10">
                             <p class="grey-text right">
@@ -54,9 +52,8 @@
                                     20/06/18
                                 </small>
                             </p>
-                            <h6 class="truncate no-margin bolder">Recharge</h6>
-                            <p>20.000 FC</p>
-                            <p class="truncate grey-text"># PP784575-1643-B46396</p>
+                            <h6 class="truncate no-margin bolder">Airtel Money</h6>
+                            <p class="truncate grey-text">097 063 1382</p>
                         </div>
                     </div>
                     <?php if ($i != 3 - 1) { ?>
