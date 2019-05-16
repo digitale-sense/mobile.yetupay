@@ -67,7 +67,7 @@
     </div>
     <!-- End Screen off transaction -->
 
-    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange"><i class="material-icons">add</i></a>
+    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_number"><i class="material-icons">add</i></a>
     <div id="adding_number" class="modal">
         <div class="modal-content">
             <h4>Modal Header</h4>
@@ -79,5 +79,6 @@
     </div>
 </body>
 <script src="../asset/js/sidenav-initer.js"></script>
+<script src="../asset/js/modal-initer.js"></script>
 
 </html>
