@@ -23,7 +23,9 @@
                     <div class="col s10">
                         <h5 class="white-text">Infos personnelles</h5>
                     </div>
-                    
+                    <?php
+                    include_once('account-dropdown.php');
+                    ?>
                 </div>
                 <div class="row center-align">
                     <div class="col s4 offset-s4 center">
