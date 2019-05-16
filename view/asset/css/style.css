@@ -108,3 +108,32 @@ nav .sidenav-trigger {
 ul.right .btn-floating{
     margin-right: 0;
 }
+#adding-button{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+.lettre{
+    font-style: normal;
+}
+.carre{
+    height: 95px;
+    width: 95px;
+    border: 2px solid white;
+}
+.carre h4{
+    margin-top: 1.8rem;
+}
+header.second {
+    height: 350px;
+}
+.half-top{
+    position: absolute;
+    right: 1rem;
+    top: -28px;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #3A79B2;
+}

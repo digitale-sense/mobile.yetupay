@@ -8,6 +8,7 @@
         <ul id="nav-mobile" class="right hide-on-small-only">
             <li><a href="#!" class="waves-effect">Acceuil</a></li>
             <li><a href="#!" class="waves-effect">Développeur</a></li>
+            <li><a href="numbers.php" class="waves-effect">Mes numéros</a></li>
         </ul>
         <ul class="left hide-on-med-and-up">
             <li>
@@ -29,7 +30,7 @@
             </li>
             <li><a href="#!" class="waves-effect"><i class="material-icons">home</i>Acceuil</a></li>
             <li><a href="#!" class="waves-effect"><i class="material-icons">code</i>Développeur</a></li>
-            <li><a href="#!" class="waves-effect"><i class="material-icons">sim_card</i>Mes numéros</a></li>
+            <li><a href="numbers.php" class="waves-effect"><i class="material-icons">sim_card</i>Mes numéros</a></li>
             <li><a href="#!" class="waves-effect"><i class="material-icons">info</i>Infos personnelles</a></li>
             <li>
                 <div class="divider"></div>
