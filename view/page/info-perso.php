@@ -9,7 +9,7 @@
     <script src="../asset/js/materialize.js"></script>
     <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/input.css">
-    <title>Mes projets</title>
+    <title>Infos personnelles</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <div class="nav-wrapper">
                 <div class="row mt-1">
                     <div class="col s10">
-                        <h5 class="white-text">Mes projets</h5>
+                        <h5 class="white-text">Infos personnelles</h5>
                     </div>
                     <div class="col s2">
                         <ul class="right">
@@ -31,6 +31,13 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="carre circle">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,11 +53,6 @@
                             <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
                         </div>
                         <div class="col s10">
-                            <p class="grey-text right">
-                                <small>
-                                    20/06/18
-                                </small>
-                            </p>
                             <h6 class="truncate no-margin bolder">LibTarta</h6>
                             <p class="truncate grey-text">
                                 clé: TDDV50F06XDV5D06V1D0
@@ -62,10 +64,22 @@
                     <?php } ?>
                 <?php } ?>
             </div>
+            <div class="card z-depth-3 radius">
+                <div class="card-content row">
+                    <div class="col s10">
+                        <h6 class="truncate no-margin bolder mt-1">Mot de passe</h6>
+                    </div>
+                    <div class="col s2">
+                        <a class="btn-floating btn-flat waves-effect white">
+                            <i class="material-icons blue-text">edit</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">add</i></a>
+    <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">edit</i></a>
     <div id="adding_project" class="modal radius">
         <form action="#" method="post">
             <div class="modal-content">
