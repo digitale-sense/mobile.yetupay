@@ -23,15 +23,9 @@
                     <div class="col s10">
                         <h5 class="white-text">Mes numéros</h5>
                     </div>
-                    <div class="col s2">
-                        <ul class="right">
-                            <li>
-                                <a class="btn-floating waves-effect btn-small z-depth-0 white">
-                                    <i class="material-icons grey-text white">person</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <?php
+                    include_once('account-dropdown.php');
+                    ?>
                 </div>
             </div>
         </nav>
@@ -100,5 +94,6 @@
 <script src="../asset/js/sidenav-initer.js"></script>
 <script src="../asset/js/modal-initer.js"></script>
 <script src="../asset/js/select-initer.js"></script>
+<script src="../asset/js/dropdown-initer.js"></script>
 
 </html>
