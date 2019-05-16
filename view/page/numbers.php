@@ -51,19 +51,20 @@
                                 break;
                             case '2':
                                 $operator = 'm-pesa';
-                            default:
+                                break;
+                            case '3':
                                 $operator = 'africell';
                                 break;
                         }
                         if(!empty($value)){?>
                             <div class="card-content row">
                                 <div class="col s2">
-                                    <img src="../asset/images/<?php echo $operator ?>.png" alt="airtel" width="100%" class="circle">
+                                    <img src="../asset/images/<?php echo $operator ?>.png" alt="<?php echo $operator ?>" width="100%" class="circle">
                                 </div>
                                 <div class="col s10">
                                     <p class="grey-text right">
                                         <small>
-                                            <?php echo $user->getSignInDatetime(); ?>.
+                                            <?php echo substr($user->getSignInDatetime(),0,strpos($user->getSignInDatetime(),' ')); ?>
                                         </small>
                                     </p>
                                     <h6 class="truncate no-margin bolder"><?php echo $key; ?></h6>
@@ -102,12 +103,9 @@
                         <label for="numero">Numéro</label>
                     </div>
                 </div>
-                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'] ?>">
-                <input type="hidden" name="password" value="<?php echo $_SESSION['password'] ?>">
-
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat " type="submit" name="action">Ajouter</a>
+                        <button href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat " type="submit" name="action">Ajouter</button>
                         <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>

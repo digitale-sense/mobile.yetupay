@@ -124,7 +124,7 @@
                 <div class="row">
                     <div class="col s12">
                         <button class="waves-effect right yetu-blue white-text btn-action btn-flat" type="submit" name="action">Modifier</button>
-                        <button class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</button>
+                        <a class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
             </div>

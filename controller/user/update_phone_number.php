@@ -1,13 +1,14 @@
 <?php
+session_start();
 $message = array();
-if(isset($_POST['user_id'],$_POST['phone_number'],$_POST['password'])){
+if(isset($_POST['phone_number'])){
     require_once('../../db_config/connection_manager.class.php');
     require_once('../../db_config/db_params.class.php');
     require_once('../../model/structure/user.class.php');
     require_once('../../model/dao/user.dao.php'); 
 
-    $user_id = $_POST['user_id'];
-    $password = htmlspecialchars($_POST['password']);   
+    $user_id = $_SESSION['user_id'];
+    $password = htmlspecialchars($_SESSION['user_pass']);   
     $phone_number = htmlspecialchars($_POST['phone_number']);
     $operator = (isset($_POST['operator'])) ? $_POST['operator'] : User::getOperator($phone_number);
     $user_dao = new UserDAO();
@@ -25,7 +26,7 @@ if(isset($_POST['user_id'],$_POST['phone_number'],$_POST['password'])){
             //
             $message = ($user_dao->update_phone_number($user,$operator)) ? array_merge(array('code' => 1)) : array_merge(array('code' => -3));
             $m='Numero ajouter';
-            header('location: ../../view/page/numbers.php'.'&m='.$m);
+            header('location: ../../view/page/numbers.php');
         }
         else
             $message = array_merge($message, array('code' => -1));

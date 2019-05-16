@@ -95,7 +95,7 @@ class User{
     }
     
     public static function getOperator($phone_number){
-        $regex = array("#^0*9[9|7][0-9]{7}$#","#^0*8[4|5|9][0-9]{7}$#","#^0*8[12][0-9]{7}$#","#^0*9[0][0-9]{7}$#");
+        $regex = array("#^0*9[9|7][0-9]{7}$#","#^0*8[4|5|9][0-9]{7}$#","#^0*8[1|2][0-9]{7}$#","#^0*9[0][0-9]{7}$#");
         for($i=0; $i<count($regex); $i++){
             if(preg_match($regex[$i],$phone_number))
                 return $i;
