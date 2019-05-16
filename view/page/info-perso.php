@@ -23,19 +23,7 @@
                     <div class="col s10">
                         <h5 class="white-text">Infos personnelles</h5>
                     </div>
-                    <div class="col s2">
-                        <ul class="right">
-                            <li>
-                                <a class="btn-floating waves-effect btn-small z-depth-0 white dropdown-trigger" data-target='account-dropdown'>
-                                    <i class="material-icons grey-text white">person</i>
-                                </a>
-                                <ul id='account-dropdown' class='dropdown-content radius'>
-                                    <li><a href="#!">Infos personnelles</a></li>
-                                    <li><a href="#!">Déconnexion</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
                 <div class="row center-align">
                     <div class="col s4 offset-s4 center">
