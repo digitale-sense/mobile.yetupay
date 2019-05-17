@@ -7,7 +7,7 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-small-only">
             <li><a href="portefeuille.php" class="waves-effect">Acceuil</a></li>
-            <li><a href="dev-project.php" class="waves-effect">Développeur</a></li>
+            <li><a href="home-dev.php" class="waves-effect">Développeur</a></li>
             <li><a href="numbers.php" class="waves-effect">Mes numéros</a></li>
         </ul>
         <ul class="left hide-on-med-and-up">
