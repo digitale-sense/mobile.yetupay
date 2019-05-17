@@ -5,18 +5,18 @@ class Developer{
     // private $name;
     // private $website;
     // private $key;
-    private $type;
+    // private $type;
     private $developer_cdf_sold;
     private $developer_usd_sold;
     private $create_datetime;
 
-    public function __construct($id,$user_id,$type,$developer_cdf_sold,$developer_usd_sold,$create_datetime){
+    public function __construct($id,$user_id,$developer_cdf_sold,$developer_usd_sold,$create_datetime){
         $this->id = $id;
         $this->user_id = $user_id;
         // $this->name = $name;
         // $this->website = $website;
         // $this->key = $key;
-        $this->type = $type;
+        // $this->type = $type;
         $this->developer_cdf_sold = $developer_cdf_sold;
         $this->developer_usd_sold = $developer_usd_sold;
         $this->create_datetime = $create_datetime;
@@ -37,9 +37,9 @@ class Developer{
     // public function getKey(){
     //     return $this->key;
     // }
-    public function getType(){
-        return $this->type;
-    }
+    // public function getType(){
+    //     return $this->type;
+    // }
     public function getDeveloperCDFSold(){
         return $this->developer_cdf_sold;
     }

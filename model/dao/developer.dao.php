@@ -12,6 +12,13 @@ class DeveloperDAO{
         return $res['id'];
     }
 
+    public function check_by_user_id(Developer $developer){
+        $req = $this->pdo->prepare( "SELECT id FROM developers WHERE user_id = :user_id");
+        $req->execute(array('user_id' => $developer->getUserId()));
+        $res = $req->fetch();
+        return $res['id'];
+    }
+
     public function check_key(Developer $developer){
         $req = $this->pdo->prepare("SELECT id FROM developers WHERE key = :key");
         $req->execute(array('key' => hash('sha512',$developer->getKey(),true)));

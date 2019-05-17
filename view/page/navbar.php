@@ -29,7 +29,7 @@
                 </div>
             </li>
             <li><a href="portefeuille.php" class="waves-effect"><i class="material-icons">home</i>Acceuil</a></li>
-            <li><a href="dev-project.php" class="waves-effect"><i class="material-icons">code</i>Développeur</a></li>
+            <li><a href="home-dev.php" class="waves-effect"><i class="material-icons">code</i>Développeur</a></li>
             <li><a href="numbers.php" class="waves-effect"><i class="material-icons">sim_card</i>Mes numéros</a></li>
             <li><a href="info-perso.php" class="waves-effect"><i class="material-icons">info</i>Infos personnelles</a></li>
             <li>
