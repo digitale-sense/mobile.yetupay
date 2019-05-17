@@ -55,7 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="col s12 center">
-                        <a class="waves-effect btn-action yetu-blue waves-light btn-small mb-2 btn-flat white-text">Créer un compte développeur</a>
+                        <a class="waves-effect btn-action yetu-blue waves-light btn-small mb-2 btn-flat white-text" ref="../../controller/developer/sign_in.php">Créer un compte développeur</a>
                     </div>
                 </div>
             </div>
