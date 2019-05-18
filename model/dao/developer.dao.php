@@ -1,6 +1,7 @@
 <?php
 class DeveloperDAO{
     private $pdo;
+
     public function __construct(){
         $this->pdo = ConnectionManager::getConnection();
     }
@@ -12,11 +13,11 @@ class DeveloperDAO{
         return $res['id'];
     }
 
-    public function check_by_user_id(Developer $developer){
-        $req = $this->pdo->prepare( "SELECT id FROM developers WHERE user_id = :user_id");
-        $req->execute(array('user_id' => $developer->getUserId()));
-        $res = $req->fetch();
-        return $res['id'];
+    public function check_by_user_id($developer){
+        $req = $this->pdo->prepare("SELECT * FROM developers WHERE user_id  = ? ");
+        $req->execute(array($developer->getUserId()));
+        $res = $req->fetchAll();
+        return $res;
     }
 
     public function check_key(Developer $developer){
@@ -27,12 +28,12 @@ class DeveloperDAO{
     }
 
     public function add(Developer $developer){
-        $req = $this->pdo->prepare("INSERT INTO developers(user_id,name,website,dev_key,type) VALUES(:user_id,:name,:website,:dev_key,:type)");
-        $res = $req->execute(array('user_id' => $developer->getUserId(),'name' => $developer->getName(),'website' => $developer->getWebSite(),'dev_key' => hash('sha512',$developer->getKey(),true),'type' => $developer->getType()));
+        $req = $this->pdo->prepare("INSERT INTO developers(user_id) VALUES(:user_id)");
+        $res = $req->execute(array('user_id' => $developer->getUserId()));
         $last_id_req = $this->pdo->query('SELECT LAST_INSERT_ID() last_id');
         $last_id_req->execute();
         $response = $last_id_req->fetch();
-        return $response['last_id'];
+        return $developer->getUserId();
     }
 
     public function get_developer_by_key($developer_key){
@@ -44,6 +45,13 @@ class DeveloperDAO{
         } catch(Exception $e){
             return $e->getMessage();
         }
+    }
+    public function get_developer_by_user_id($developper_id){
+        $req = $this->pdo->prepare("SELECT * FROM developers WHERE user_id = :user_id");
+        $req->execute(array('user_id' => $developper_id));
+        $res = $req->fetch(); 
+        $user = new Developer($res['developer_id'],$res['user_id'],$res['developer_cdf_sold'],$res['developer_usd_sold'],$res['developer_sign_in_datetime']);
+        return $user;     
     }
 }
 

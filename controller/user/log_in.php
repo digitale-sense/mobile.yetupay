@@ -8,6 +8,8 @@ if(isset($_POST['password'])){
     require_once('../../model/dao/user.dao.php');
     require_once('../../model/structure/transaction.class.php');
     require_once('../../model/dao/transfer.dao.php');
+    require_once('../../model/structure/developer.class.php');
+    require_once('../../model/dao/developer.dao.php'); 
 
     $id = (isset($_POST['id'])) ? $_POST['user_id'] : null;
     $pseudo = (isset($_POST['pseudo'])) ? htmlspecialchars($_POST['pseudo']) : null;

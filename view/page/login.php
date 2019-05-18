@@ -16,7 +16,9 @@
     <section>
         <div class="row container">
             <div class="col s12 center-align">
-                <img src="../asset/images/yetupay.png" alt="YetuPay" id="main-logo">
+                <object class="my-1-2" data="../asset/images/yetupay.svg" height="150" type="image/svg+xml">
+                    <embed class="my-1-2" src="../asset/images/yetupay.svg" height="150" type="image/svg+xml" />
+                </object>
             </div>
             <div class="row">
                 <div class="col s12 card m6 offset-m3 radius z-depth-3 py-2">
@@ -45,7 +47,7 @@
                                     <div class="row">
                                         <div class="col s12">
                                             <label>
-                                                <input type="checkbox" id="stay_connected_log" />
+                                                <input type="checkbox" name="stay_connected" id="stay_connected_log" />
                                                 <span>Rester connecté</span>
                                             </label>
                                         </div>
@@ -71,6 +73,10 @@
 </body>
 <script src="../asset/js/pass-view.js"></script>
 <script>
+    <?php if(isset($_GET['code'])){
+        if($_GET['code']== -4) echo "M.toast({html: 'L\'identifiant et le mot de passe ne correspondent pas'})";
+    } ?>
+    <?= isset($_GET['m']) ? "M.toast({html: '" . $_GET['m'] . "'})" : "" ?>
     <?php if (isset($_GET['dev_key'])) { ?> DEV_KEY = '<?= $_GET['dev_key'] ?>';
     <?php } ?>
 </script>

@@ -23,11 +23,13 @@ if(isset($_POST['phone_number'],$_POST['password'])){
         elseif($operator == 3) 
             $user = new user(null,null,$pseudo,null,$password,null,null,null,$phone_number,null,null,null,null,null,null);
         //
-        if($user->isPasswordCorrect()){
+        if(strlen($user->getPass())>=8){
             $user_dao = new UserDAO();
             $result = $user_dao->check_sign_in_datas($user);
             if($result>0){
-                $message = array_merge($message, array('code' => 0));}
+                $message = array_merge($message, array('code' => 0));
+                header("Location: ../../view/page/sigin.php?code=".$message['code']);
+            }
             elseif(is_null($result)){
                 $new_user_id = $user_dao->add($user);
                 $user = $user_dao->get_user_by_id($new_user_id);
@@ -37,13 +39,13 @@ if(isset($_POST['phone_number'],$_POST['password'])){
         else{
             // invalid password
             $message = array_merge($message, array('code' => -2));
-            header("Location: ../../view/page/sign.php?code=".$message['code']);
+            header("Location: ../../view/page/sigin.php?code=".$message['code']);
         }  
     }
     else{
         // invalid phone number
         $message = array_merge($message,array('code' => -1));
-        header("Location: ../../view/page/sign.php?code=".$message['code']);
+        header("Location: ../../view/page/sigin.php?code=".$message['code']);
     }
 }
 ?>
