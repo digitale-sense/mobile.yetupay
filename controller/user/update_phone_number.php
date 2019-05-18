@@ -1,17 +1,16 @@
 <?php
-define('PATH', '../../');
+session_start();
 $message = array();
-if(isset($_GET['user_id'],$_GET['phone_number'],$_GET['password'])){
-    require_once(PATH . 'db_config/connection_manager.class.php');
-    require_once(PATH . 'db_config/db_params.class.php');
-    spl_autoload_register(function ($class) {
-        $file = strpos($class, "DAO") > 1 ? 'm/dao/' . strtolower((substr($class, 0, strpos($class, "Manager")))) . '.dao.php' : 'm/structure/' . strtolower($class) . '.class.php';
-        require_once(PATH . $file);
-    });
-    $user_id = $_GET['user_id'];
-    $password = htmlspecialchars($_GET['password']);   
-    $phone_number = htmlspecialchars($_GET['phone_number']);
-    $operator = (isset($_GET['operator'])) ? $_GET['operator'] : User::getOperator($phone_number);
+if(isset($_POST['phone_number'])){
+    require_once('../../db_config/connection_manager.class.php');
+    require_once('../../db_config/db_params.class.php');
+    require_once('../../model/structure/user.class.php');
+    require_once('../../model/dao/user.dao.php'); 
+
+    $user_id = $_SESSION['user_id'];
+    $password = htmlspecialchars($_SESSION['user_pass']);   
+    $phone_number = htmlspecialchars($_POST['phone_number']);
+    $operator = (isset($_POST['operator'])) ? $_POST['operator'] : User::getOperator($phone_number);
     $user_dao = new UserDAO();
     $user = new User($user_id,null,null,null,$password,null,null,null,null,null,null,null,null,null);
     if($user_dao->check_password($user)){
@@ -26,6 +25,8 @@ if(isset($_GET['user_id'],$_GET['phone_number'],$_GET['password'])){
                 $user = new user($user_id,null,null,null,$password,null,null,null,$phone_number,null,null,null,null,null);
             //
             $message = ($user_dao->update_phone_number($user,$operator)) ? array_merge(array('code' => 1)) : array_merge(array('code' => -3));
+            $m='Numero ajouter';
+            header('location: ../../view/page/numbers.php');
         }
         else
             $message = array_merge($message, array('code' => -1));

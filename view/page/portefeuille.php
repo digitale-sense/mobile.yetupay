@@ -90,7 +90,7 @@
                     <div class="col s10">
                         <p class="grey-text right">
                             <small>
-                                <?php echo $value['datetime']?>
+                                <?php echo substr($value['datetime'],0,strpos($value['datetime'],' '))?>
                             </small>
                         </p>
                         <h6 class="truncate no-margin bolder">Recharge</h6>

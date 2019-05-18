@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $tab_info= ["Name" => $_SESSION['full_name'],'Pseudo' => $_SESSION['pseudo'], "Mail" =>$_SESSION['email']];
+?>
 <html lang="fr">
 
 <head>
@@ -43,18 +47,20 @@
                 <a class="btn-floating right half-top z-depth-3 btn-large waves-effect white modal-trigger" href="#edit_account">
                     <i class="material-icons blue-text">edit</i>
                 </a>
-                <?php for ($i = 0; $i < 3; $i++) { ?>
-                    <div class="card-content row">
-                        <div class="col s2">
-                            <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
+                <?php 
+                    $i= 0;
+                    foreach ($tab_info as $key => $value) { ?>
+                        <div class="card-content row">
+                            <div class="col s2">
+                                <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
+                            </div>
+                            <div class="col s10">
+                                <h6 class="truncate no-margin bolder"><?php echo $key; ?></h6>
+                                <p class="truncate grey-text">
+                                    <?php if(!empty($value)){ echo $value; }?>
+                                </p>
+                            </div>
                         </div>
-                        <div class="col s10">
-                            <h6 class="truncate no-margin bolder">LibTarta</h6>
-                            <p class="truncate grey-text">
-                                clé: TDDV50F06XDV5D06V1D0
-                            </p>
-                        </div>
-                    </div>
                     <?php if ($i != 3 - 1) { ?>
                         <div class="divider"></div>
                     <?php } ?>
@@ -75,24 +81,24 @@
         </div>
     </div>
     <div id="edit_account" class="modal radius">
-        <form action="#" method="post">
+        <form action="../../controller/user/update_profile.php" method="post">
             <div class="modal-content row">
                 <h6>Modifier mon compte</h6><br>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="name" type="text">
+                    <input id="name" name = 'name'type="text">
                     <label for="name">Nom</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="pseudo" type="text">
+                    <input id="pseudo" type="text" name="pseudo">
                     <label for="speudo">Pseudo</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="mail" type="email">
+                    <input id="mail" type="email" name="email">
                     <label for="mail">Mail</label>
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Modifier</a>
+                        <button class="waves-effect right yetu-blue white-text btn-action btn-flat" type="submit" name="action">Modifier</button>
                         <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
@@ -100,15 +106,15 @@
         </form>
     </div>
     <div id="edit_pwd" class="modal radius">
-        <form action="#" method="post">
+        <form action="../../controller/user/update_password.php" method="post">
             <div class="modal-content row">
                 <h6>Modifier le mot de passe</h6><br>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="old" type="text">
+                    <input id="old" name = "password" type="text">
                     <label for="old">Ancien</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
-                    <input id="new" type="text">
+                    <input id="new" name = 'new_password' type="text">
                     <label for="new">Nouveau</label>
                 </div>
                 <div class="input-field col s12 m8 offset-m2">
@@ -117,8 +123,8 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Modifier</a>
-                        <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
+                        <button class="waves-effect right yetu-blue white-text btn-action btn-flat" type="submit" name="action">Modifier</button>
+                        <a class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
             </div>
