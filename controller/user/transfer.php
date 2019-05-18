@@ -32,21 +32,21 @@ if(isset($_POST['user_id'],$_POST['password'],$_POST['receiver_login'],$_POST['a
               
                 $message = array('state' => 1);
                 $m='Le transfert a reussi';
-                header('location: ../../view/page/transferer.php?user_id='. $_POST['user_id'] .'&m='.$m);
+                header('location: ../../view/page/transferer.php?m='.$m);
             }
             else{
                 $m = 'Destinataire non authentifié';
-                header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+                header('location: ../../view/page/transferer.php?m=' . $m);
             }
         }
     }
     else{
         $m = 'Mot de passe incorret';
-        header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+        header('location: ../../view/page/transferer.php?m=' . $m);
     }
 }
 else{
     $m = 'Reverifier les champs fournies';
-    header('location: ../../view/page/transferer.php?user_id=' . $_POST['user_id'] . '&m=' . $m);
+    header('location: ../../view/page/transferer.php?m=' . $m);
 }
 ?>

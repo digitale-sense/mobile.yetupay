@@ -50,8 +50,7 @@ class DeveloperDAO{
         $req = $this->pdo->prepare("SELECT * FROM developers WHERE user_id = :user_id");
         $req->execute(array('user_id' => $developper_id));
         $res = $req->fetch(); 
-        $user = new Developer($res['developer_id'],$res['user_id'],$res['developer_cdf_sold'],$res['developer_usd_sold'],$res['developer_sign_in_datetime']);
-        return $user;     
+        return new Developer($res['developer_id'],$res['user_id'],$res['developer_cdf_sold'],$res['developer_usd_sold'],$res['developer_sign_in_datetime']);   
     }
 }
 

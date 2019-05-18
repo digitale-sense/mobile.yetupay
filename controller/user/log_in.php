@@ -31,6 +31,7 @@ if(isset($_POST['password'])){
         $user = new User($id,null,$pseudo,$email,$password,null,null,null,null,null,null,null,null,$connection_device);
 
     $user_dao = new UserDAO();
+    $developer_dao = new DeveloperDAO();
     $id = $user_dao->check_log_in_datas($user);
     
     if(is_null($id)){
@@ -40,34 +41,14 @@ if(isset($_POST['password'])){
         $user->setId($id);
         $user_dao->update_log_in_informations($user);
         $user = $user_dao->get_user_by_id($id);
+        $developer = $developer_dao->get_developer_by_user_id($user->getId());
+
         if(isset($_POST['stay_connected'])){
-            setcookie('user_id',$user->getId(),time()+30*24*3600,null,null,false,true);
-            $_SESSION['user_id'] = $user->getId();
-            $_SESSION['full_name'] = $user->getFullname();
-            $_SESSION['pseudo'] = $user->getPseudo();
-            $_SESSION['email'] = $user->getEmail();
-            $_SESSION['tel_airtel'] = $user->getTelAirtel();
-            $_SESSION['tel_orange'] = $user->getTelOrange();
-            $_SESSION['tel_vodacom'] = $user->getTelVodacom();
-            $_SESSION['tel_africell'] = $user->getTelAfricell();
-            $_SESSION['sign_in_datetime'] = $user->getSignInDatetime();
-            $_SESSION['last_connection_datetime'] = $user->getLastConnectionDatetime();
-            $_SESSION['last_connection_device'] = $user->getLastConnectionDevice();
+            require_once('../start_cookies.php');
             header("Location: ../../view/page/portefeuille.php");            
         }
         else{
-            $_SESSION['user_id'] = $user->getId();
-            $_SESSION['user_pass'] = $_POST['password'];
-            $_SESSION['full_name'] = $user->getFullname();
-            $_SESSION['pseudo'] = $user->getPseudo();
-            $_SESSION['email'] = $user->getEmail();
-            $_SESSION['tel_airtel'] = $user->getTelAirtel();
-            $_SESSION['tel_orange'] = $user->getTelOrange();
-            $_SESSION['tel_vodacom'] = $user->getTelVodacom();
-            $_SESSION['tel_africell'] = $user->getTelAfricell();
-            $_SESSION['sign_in_datetime'] = $user->getSignInDatetime();
-            $_SESSION['last_connection_datetime'] = $user->getLastConnectionDatetime();
-            $_SESSION['last_connection_device'] = $user->getLastConnectionDevice();
+            require_once('../start_cookies.php');
             header("Location: ../../view/page/portefeuille.php");
         }
     }

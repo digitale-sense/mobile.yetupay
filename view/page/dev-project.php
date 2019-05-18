@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once('../../controller/developer/project.php');
 ?>
 <html lang="fr">
 
@@ -37,7 +38,16 @@
     <div class="row back-top">
         <div class="col s12">
             <div class="card z-depth-3 radius">
-                <?php for ($i = 0; $i < 3; $i++) { ?>
+                <?php if (count($proj)==0){ ?>
+                    <div class="card-content row">
+                        <div class="container center">
+                            <i class="grey-text">Aucun projet</i>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php foreach ($proj as $project) {
+                    var_dump($project);
+                   ?>
                     <div class="card-content row">
                         <div class="col s2">
                             <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
@@ -54,9 +64,6 @@
                             </p>
                         </div>
                     </div>
-                    <?php if ($i != 3 - 1) { ?>
-                        <div class="divider"></div>
-                    <?php } ?>
                 <?php } ?>
             </div>
         </div>
@@ -64,12 +71,12 @@
 
     <a id="adding-button" class="btn-floating z-depth-3 btn-large waves-effect waves-light yetu-orange modal-trigger" href="#adding_project"><i class="material-icons">add</i></a>
     <div id="adding_project" class="modal radius">
-        <form action="#" method="post">
+        <form action="../../controller/developer/add-project.php" method="post">
             <div class="modal-content">
                 <h5>Ajouter un projet</h5><br>
                 <div class="row">
                     <div class="input-field col s12">
-                        <select>
+                        <select name="type">
                             <option value="" disabled selected>Choisir le type</option>
                             <option value="w">Web</option>
                             <option value="m">Mobile</option>
@@ -78,13 +85,15 @@
                         <label>Type de projet</label>
                     </div>
                     <div class="input-field col s12 m8 offset-m2">
-                        <input id="name" type="text">
+                        <input id="name" name="name" type="text">
                         <label for="name">Nom</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <a href="#!" class="waves-effect right yetu-blue white-text btn-action btn-flat">Ajouter</a>
+                        <button class="waves-effect waves-light btn right yetu-blue btn-action tuma" id="Flogin" type="submit" name="action">
+                            Ajouter
+                        </button>
                         <a href="#!" class="modal-close right waves-effect red-text btn-action btn-flat">Fermer</a>
                     </div>
                 </div>
