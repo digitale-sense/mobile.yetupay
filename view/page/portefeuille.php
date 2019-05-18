@@ -71,7 +71,11 @@
             <a href="recharge.php" class="waves-effect btn-action waves-light yetu-blue btn">Recharger</a>
         </div>
         <div class="col s6 center">
+<<<<<<< HEAD
             <a href="transferer.php?user_id=<?php echo $_SESSION['user_id']; ?>"class="waves-effect btn-action waves-light yetu-blue btn">Transferer</a>
+=======
+            <a href="transferer.php"class="waves-effect btn-action waves-light yetu-blue btn">Transferer</a>
+>>>>>>> 12e7272c95a943b15155e2618a6b0f7a605f7596
         </div>
         
     </div>
