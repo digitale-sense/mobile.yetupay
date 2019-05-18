@@ -14,10 +14,10 @@ if(isset($_SESSION['user_id'])){
     $result = $developer_dao->check_by_user_id($developer);
     if (!empty($result)){
         $message = array_merge($message, array('code' => 0));
-    }elseif (empty($result)){
+    }elseif(empty($result)){
         $developer = $developer_dao->get_developer_by_user_id($developer_dao->add($developer));
+        $_SESSION['developer_id'] = $developer->getId();
+        header("Location: ../../view/page/dev-project.php");
     }
-    $_SESSION['developer_id'] = $developer->getId();
-    header("Location: ../../view/page/dev-project.php");
 }
 ?>
