@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html lang="fr">
 
 <head>
@@ -65,27 +68,18 @@
             <div class="modal-content">
                 <h5>Ajouter un projet</h5><br>
                 <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="name" type="text">
-                        <label for="name">Nom</label>
-                    </div>
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="domaine" type="text">
-                        <label for="domaine">Domaine</label>
-                    </div>
                     <div class="input-field col s12">
                         <select>
                             <option value="" disabled selected>Choisir le type</option>
                             <option value="w">Web</option>
                             <option value="m">Mobile</option>
                             <option value="d">Desktop</option>
-                            <option value="i">IoT</option>
-                            </select>
+                        </select>
                         <label>Type de projet</label>
                     </div>
-                    <div class="input-field col s12">
-                        <textarea id="description" class="materialize-textarea"></textarea>
-                        <label for="description">Description</label>
+                    <div class="input-field col s12 m8 offset-m2">
+                        <input id="name" type="text">
+                        <label for="name">Nom</label>
                     </div>
                 </div>
                 <div class="row">

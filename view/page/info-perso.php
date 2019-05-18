@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $tab_info= ["Name" => $_SESSION['full_name'],'Pseudo' => $_SESSION['pseudo'], "Mail" =>$_SESSION['email']];
+    $tab_info= ["Nom" => $_SESSION['full_name'],'Pseudo' => $_SESSION['pseudo'], "Mail" =>$_SESSION['email']];
 ?>
 <html lang="fr">
 
@@ -34,7 +34,14 @@
                 <div class="row center-align">
                     <div class="col s4 offset-s4 center">
                         <div class="carre second circle">
-                            <h4>L</h4>
+                            <h4>
+                                <?php 
+                                    if(!empty($_SESSION['pseudo'])){ 
+                                        echo substr($_SESSION['pseudo'], 0, 1); 
+                                    } else 
+                                        echo '?';
+                                ?>
+                            </h4>
                         </div>
                     </div>
                 </div>
@@ -52,12 +59,14 @@
                     foreach ($tab_info as $key => $value) { ?>
                         <div class="card-content row">
                             <div class="col s2">
-                                <a class="btn-floating btn-flat waves-effect waves-light red"><i class="lettre">L</i></a>
+                                <a class="btn-floating btn-flat waves-effect waves-light yetu-blue">
+                                    <i class="lettre"><?php echo substr($key, 0, 1); ?></i>
+                                </a>
                             </div>
                             <div class="col s10">
                                 <h6 class="truncate no-margin bolder"><?php echo $key; ?></h6>
                                 <p class="truncate grey-text">
-                                    <?php if(!empty($value)){ echo $value; }?>
+                                    <?php if(!empty($value)){ echo $value; } else echo '<i class="grey-text">Aucun</i>'?>
                                 </p>
                             </div>
                         </div>

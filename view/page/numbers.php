@@ -41,6 +41,7 @@
                 <?php 
                     $i=0;
                     foreach ($message['PHONE_NUMBER'] as $key =>$value) {
+
                         $operator='';
                         switch (User::getOperator($value)) {
                             case '0':
@@ -91,7 +92,7 @@
                         <select class="icons">
                             <option value="" disabled selected>Opérateur</option>
                             <option value="0" data-icon="../asset/images/airtel.png" class="left">Airtel Money</option>
-                            <option value="2" data-icon="../asset/images/m-pesa.jpg" class="left">M-Pesa</option>
+                            <option value="2" data-icon="../asset/images/m-pesa.png" class="left">M-Pesa</option>
                             <option value="1" data-icon="../asset/images/orange.png" class="left">Orange Money</option>
                         </select>
                         <label>Opérateur</label>
