@@ -43,7 +43,7 @@
                         <h5>Choisissez un opérateur</h5>
                         <div class="col s6">
                             <a href="#">
-                                <img src="../asset/images/m-pesa.jpg" width="100%" class="radius my-2 z-depth-1" alt="m-pesa">
+                                <img src="../asset/images/m-pesa.png" width="100%" class="radius my-2 z-depth-1" alt="m-pesa">
                             </a>
                         </div>
                         <div class="col s6">

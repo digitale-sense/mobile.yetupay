@@ -2,6 +2,7 @@
 session_start();
 $message = array();
 if(isset($_POST['phone_number'])){
+    echo "salut";
     require_once('../../db_config/connection_manager.class.php');
     require_once('../../db_config/db_params.class.php');
     require_once('../../model/structure/user.class.php');
@@ -28,10 +29,14 @@ if(isset($_POST['phone_number'])){
             $m='Numero ajouter';
             header('location: ../../view/page/numbers.php');
         }
-        else
+        else{
             $message = array_merge($message, array('code' => -1));
+            echo "bonjour";
+        }
     }
     else
         $message = array_merge($message, array('code' => -4));
+}else{
+    var_dump($_SESSION);
 }
 ?>
